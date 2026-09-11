@@ -765,6 +765,55 @@
         }
         .selfie-footer .btn-retry.show { display: block; }
 
+        /* Manual Upload Alternative */
+        .manual-upload-box {
+            background: #e8f4fd;
+            border: 1px solid #b3d9f2;
+            color: #0c5460;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            line-height: 1.5;
+            text-align: left;
+            display: none;
+        }
+        .manual-upload-box.show { display: block; }
+        .manual-upload-box label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .manual-upload-box input[type="file"] {
+            display: none;
+        }
+        .manual-upload-btn {
+            background: var(--primary);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+        }
+        .preview-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 10px;
+            display: none;
+        }
+        .preview-image.show { display: block; }
+
         /* Terms Modal */
         .terms-modal-overlay {
             position: fixed;
@@ -880,7 +929,6 @@
                 <div class="auth-tab" id="tab-register" onclick="switchAuthTab('register')">ලියාපදිංචි වන්න (Register)</div>
             </div>
 
-            <!-- Login Form -->
             <form id="login-form" class="auth-form active" onsubmit="handleLogin(event)">
                 <div class="error-msg" id="login-error"></div>
                 <div class="input-group">
@@ -896,7 +944,6 @@
                 </button>
             </form>
 
-            <!-- Register Form -->
             <form id="register-form" class="auth-form" onsubmit="handleRegister(event)">
                 <div class="error-msg" id="register-error"></div>
                 <div class="success-msg" id="register-success"></div>
@@ -955,7 +1002,6 @@
                 </div>
             </header>
 
-            <!-- ===== Home Page ===== -->
             <div id="page-home" class="page active">
                 
                 <section class="hero">
@@ -995,13 +1041,11 @@
 
             </div>
 
-            <!-- ===== My Loans Page ===== -->
             <div id="page-loans" class="page">
                 <div class="form-title" style="margin-bottom: 20px;">මගේ සියලුම ණය</div>
                 <div id="all-loans-container"></div>
             </div>
 
-            <!-- ===== Apply Loan Page ===== -->
             <div id="page-apply" class="page">
                 <div class="form-card">
                     <div class="form-title">නව ණයක් අයදුම් කරන්න</div>
@@ -1076,7 +1120,6 @@
                 </div>
             </div>
 
-            <!-- ===== Profile Page ===== -->
             <div id="page-profile" class="page">
                 <div class="loan-card">
                     <div class="loan-card-header">
@@ -1099,7 +1142,6 @@
                 </div>
             </div>
 
-            <!-- ===== Settings Page ===== -->
             <div id="page-settings" class="page">
                 <div class="loan-card">
                     <div class="loan-card-header">
@@ -1118,7 +1160,6 @@
                 </div>
             </div>
 
-            <!-- Bottom Navigation -->
             <nav class="bottom-nav">
                 <div class="nav-item active" onclick="switchTab('home', this)">
                     <i class="fas fa-home"></i><span>මුල් පිටුව</span>
@@ -1183,11 +1224,24 @@
                     <i class="fas fa-camera"></i> මුහුණු සත්‍යාපනය
                 </div>
                 <div class="selfie-body">
-                    <div class="camera-preview">
+                    <!-- Camera Preview -->
+                    <div class="camera-preview" id="camera-preview-box">
                         <video id="selfie-video" autoplay playsinline muted></video>
                         <div class="scan-overlay"></div>
                         <div class="scan-line"></div>
                     </div>
+
+                    <!-- Manual Upload Alternative (shown when camera fails) -->
+                    <div class="manual-upload-box" id="manual-upload-box">
+                        <strong><i class="fas fa-info-circle"></i> කැමරාව ක්‍රියාත්මක නොවේ</strong>
+                        <p style="margin-top: 8px;">බ්‍රව්සරයේ ආරක්ෂක සීමාවන් හේතුවෙන් කැමරාව ක්‍රියාත්මක නොවිය හැක. කරුණාකර ඔබගේ ඡායාරූපයක් උඩුගත කරන්න.</p>
+                        <label for="selfie-upload">
+                            <span class="manual-upload-btn"><i class="fas fa-upload"></i> ඡායාරූපය උඩුගත කරන්න</span>
+                        </label>
+                        <input type="file" id="selfie-upload" accept="image/*" onchange="handleSelfieUpload(event)">
+                        <img id="selfie-preview" class="preview-image" alt="Preview">
+                    </div>
+
                     <div class="selfie-status" id="selfie-status">
                         <span class="spinner"></span> කැමරාව සූදානම් වෙමින්...
                     </div>
@@ -1195,6 +1249,9 @@
                 <div class="selfie-footer">
                     <button class="btn-capture" id="btn-capture" onclick="captureSelfie()" disabled>
                         <i class="fas fa-camera"></i> ඡායාරූපය ගන්න
+                    </button>
+                    <button class="btn-capture" id="btn-confirm-upload" onclick="confirmManualUpload()" style="display: none; background: var(--success);">
+                        <i class="fas fa-check"></i> ඡායාරූපය තහවුරු කරන්න
                     </button>
                     <button class="btn-retry" id="btn-retry" onclick="retryCamera()">
                         <i class="fas fa-redo"></i> නැවත උත්සාහ කරන්න
@@ -1263,6 +1320,7 @@
         let selfieStream = null;
         let pendingLoanData = null;
         let cameraReady = false;
+        let manualUploadImage = null;
 
         // ================= Auth Functions =================
         
@@ -1552,13 +1610,21 @@
             openSelfieModal();
         }
 
-        // ================= Selfie Verification (Fixed) =================
+        // ================= Selfie Verification (Enhanced) =================
         function openSelfieModal() {
             cameraReady = false;
+            manualUploadImage = null;
             document.getElementById('selfie-modal').classList.add('active');
+            
+            // Reset UI
             document.getElementById('btn-capture').disabled = true;
             document.getElementById('btn-capture').style.display = 'block';
             document.getElementById('btn-retry').classList.remove('show');
+            document.getElementById('manual-upload-box').classList.remove('show');
+            document.getElementById('btn-confirm-upload').style.display = 'none';
+            document.getElementById('selfie-preview').classList.remove('show');
+            document.getElementById('camera-preview-box').style.display = 'flex';
+            
             startCamera();
         }
 
@@ -1567,11 +1633,13 @@
             const status = document.getElementById('selfie-status');
             const captureBtn = document.getElementById('btn-capture');
             const retryBtn = document.getElementById('btn-retry');
+            const manualBox = document.getElementById('manual-upload-box');
 
             status.innerHTML = '<span class="spinner"></span> කැමරාව සූදානම් වෙමින්...';
             captureBtn.disabled = true;
             captureBtn.style.display = 'block';
             retryBtn.classList.remove('show');
+            manualBox.classList.remove('show');
             cameraReady = false;
 
             // Stop any existing stream
@@ -1580,15 +1648,30 @@
                 selfieStream = null;
             }
 
+            // Check protocol - Camera requires HTTPS or localhost (not file://)
+            const isSecure = window.location.protocol === 'https:' || 
+                             window.location.hostname === 'localhost' || 
+                             window.location.hostname === '127.0.0.1';
+
             // Check if camera API is available
             if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-                status.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> මෙම උපාංගයේ කැමරාව භාවිතා කළ නොහැක. කරුණාකර වෙනත් උපාංගයක් භාවිතා කරන්න.';
+                status.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> මෙම බ්‍රව්සරයේ කැමරාව භාවිතා කළ නොහැක.';
                 captureBtn.style.display = 'none';
                 retryBtn.classList.add('show');
+                manualBox.classList.add('show');
                 return;
             }
 
-            // Request camera access
+            // If file:// protocol, show manual upload option immediately
+            if (!isSecure && window.location.protocol === 'file:') {
+                status.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> බ්‍රව්සරයේ ආරක්ෂක සීමාවන් හේතුවෙන් කැමරාව ක්‍රියාත්මක නොවේ. කරුණාකර ඡායාරූපයක් උඩුගත කරන්න.';
+                captureBtn.style.display = 'none';
+                retryBtn.classList.add('show');
+                manualBox.classList.add('show');
+                return;
+            }
+
+            // Try to access camera
             navigator.mediaDevices.getUserMedia({ 
                 video: { 
                     facingMode: 'user',
@@ -1603,7 +1686,6 @@
                     .then(() => {
                         status.innerHTML = 'කරුණාකර ඔබේ මුහුණ කැමරාවට එක් කරන්න...';
                         
-                        // After 2.5 seconds, allow capture
                         setTimeout(() => {
                             if (selfieStream && selfieStream.active) {
                                 status.innerHTML = '<i class="fas fa-check-circle" style="color: var(--success);"></i> මුහුණු ස්කෑන් සාර්ථකයි! දැන් ඡායාරූපය ගන්න.';
@@ -1614,9 +1696,10 @@
                     })
                     .catch(err => {
                         console.error('Video play error:', err);
-                        status.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> වීඩියෝ ප්‍රදර්ශනය කිරීමට නොහැක. නැවත උත්සාහ කරන්න.';
+                        status.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> වීඩියෝ ප්‍රදර්ශනය කිරීමට නොහැක.';
                         captureBtn.style.display = 'none';
                         retryBtn.classList.add('show');
+                        manualBox.classList.add('show');
                     });
             })
             .catch(function(error) {
@@ -1630,12 +1713,13 @@
                 } else if (error.name === 'NotReadableError') {
                     errorMsg += 'කැමරාව වෙනත් යෙදුමක භාවිතයේ ඇත.';
                 } else {
-                    errorMsg += 'නැවත උත්සාහ කරන්න.';
+                    errorMsg += 'නැවත උත්සාහ කරන්න හෝ ඡායාරූපයක් උඩුගත කරන්න.';
                 }
                 
                 status.innerHTML = `<i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> ${errorMsg}`;
                 captureBtn.style.display = 'none';
                 retryBtn.classList.add('show');
+                manualBox.classList.add('show');
             });
         }
 
@@ -1665,6 +1749,47 @@
             }, 1500);
         }
 
+        // Manual Upload Handler
+        function handleSelfieUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    manualUploadImage = e.target.result;
+                    const preview = document.getElementById('selfie-preview');
+                    preview.src = e.target.result;
+                    preview.classList.add('show');
+                    
+                    document.getElementById('camera-preview-box').style.display = 'none';
+                    document.getElementById('btn-confirm-upload').style.display = 'block';
+                    document.getElementById('btn-capture').style.display = 'none';
+                    document.getElementById('btn-retry').style.display = 'none';
+                    
+                    document.getElementById('selfie-status').innerHTML = '<i class="fas fa-check-circle" style="color: var(--success);"></i> ඡායාරූපය උඩුගත කරන ලදී. තහවුරු කරන්න.';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function confirmManualUpload() {
+            if (!manualUploadImage) {
+                showModal('warning', 'ඡායාරූපයක් නොමැත', 'කරුණාකර ඡායාරූපයක් උඩුගත කරන්න.');
+                return;
+            }
+
+            const status = document.getElementById('selfie-status');
+            status.innerHTML = '<span class="spinner"></span> සත්‍යාපනය සිදු කරමින්...';
+
+            setTimeout(() => {
+                status.innerHTML = '<i class="fas fa-check-circle" style="color: var(--success);"></i> සත්‍යාපනය සාර්ථකයි!';
+                
+                setTimeout(() => {
+                    closeSelfieModal(false);
+                    finalizeLoanApplication();
+                }, 1000);
+            }, 1500);
+        }
+
         function closeSelfieModal(cancelled) {
             document.getElementById('selfie-modal').classList.remove('active');
             if (selfieStream) {
@@ -1673,8 +1798,8 @@
             }
             document.getElementById('selfie-video').srcObject = null;
             cameraReady = false;
+            manualUploadImage = null;
 
-            // If user cancelled, don't finalize
             if (cancelled) {
                 pendingLoanData = null;
                 showModal('warning', 'සත්‍යාපනය අවලංගු කරන ලදී', 'මුහුණු සත්‍යාපනය අවලංගු කරන ලදී. ණය අයදුම්පත යවා නොමැත.');
