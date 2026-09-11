@@ -514,6 +514,118 @@
             cursor: pointer;
         }
 
+        /* ================= NIC Upload Section ================= */
+        .nic-upload-section {
+            background: #e8f4fd;
+            border: 2px solid #b3d9f2;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .nic-upload-section h4 {
+            color: var(--primary);
+            font-size: 15px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nic-upload-section h4 i { color: var(--accent); }
+        .nic-upload-section > p {
+            font-size: 12px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+        .nic-upload-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .nic-upload-box {
+            background: var(--white);
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+            min-height: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .nic-upload-box:hover {
+            border-color: var(--primary);
+            background: #f0f7ff;
+        }
+        .nic-upload-box.uploaded {
+            border-color: var(--success);
+            border-style: solid;
+            background: #f0fdf4;
+        }
+        .nic-upload-box .nic-placeholder i {
+            font-size: 32px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+        .nic-upload-box.uploaded .nic-placeholder i {
+            color: var(--success);
+        }
+        .nic-upload-box .nic-placeholder span {
+            font-size: 13px;
+            color: var(--text-dark);
+            font-weight: 600;
+            display: block;
+        }
+        .nic-upload-box .nic-placeholder p {
+            font-size: 10px;
+            color: var(--text-light);
+            margin: 3px 0 0 0;
+        }
+        .nic-upload-box input[type="file"] {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+        }
+        .nic-preview {
+            width: 100%;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: none;
+        }
+        .nic-upload-box.uploaded .nic-preview {
+            display: block;
+        }
+        .nic-upload-box.uploaded .nic-placeholder {
+            display: none;
+        }
+        .nic-success-icon {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: var(--success);
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            z-index: 5;
+        }
+        .nic-upload-box.uploaded .nic-success-icon {
+            display: flex;
+        }
+
         /* Bottom Nav */
         .bottom-nav {
             position: fixed;
@@ -658,12 +770,14 @@
 
         .selfie-container {
             width: 100%;
-            max-width: 350px;
+            max-width: 380px;
             background: var(--white);
             border-radius: 20px;
             overflow: hidden;
             text-align: center;
             animation: popIn 0.3s ease;
+            max-height: 90vh;
+            overflow-y: auto;
         }
         .selfie-header {
             background: var(--primary);
@@ -675,7 +789,7 @@
         .selfie-body { padding: 20px; }
         .camera-preview {
             width: 100%;
-            height: 250px;
+            height: 220px;
             background: #000;
             border-radius: 15px;
             overflow: hidden;
@@ -758,61 +872,68 @@
             color: var(--danger);
             border: 1px solid var(--danger);
         }
-        .selfie-footer .btn-retry {
-            background: var(--warning);
-            color: var(--primary);
-            display: none;
-        }
-        .selfie-footer .btn-retry.show { display: block; }
 
-        /* Manual Upload Alternative */
-        .manual-upload-box {
-            background: #e8f4fd;
-            border: 1px solid #b3d9f2;
-            color: #0c5460;
+        /* Always-visible Manual Upload Section */
+        .manual-upload-section {
+            background: #f0f7ff;
+            border: 2px dashed #b3d9f2;
+            border-radius: 12px;
             padding: 15px;
-            border-radius: 10px;
             margin-bottom: 15px;
-            font-size: 13px;
-            line-height: 1.5;
-            text-align: left;
-            display: none;
+            text-align: center;
         }
-        .manual-upload-box.show { display: block; }
-        .manual-upload-box label {
+        .manual-upload-section h5 {
+            font-size: 13px;
+            color: var(--primary);
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-top: 10px;
-            cursor: pointer;
-            font-weight: 600;
-            color: var(--primary);
+            justify-content: center;
+            gap: 8px;
         }
-        .manual-upload-box input[type="file"] {
-            display: none;
-        }
+        .manual-upload-section h5 i { color: var(--accent); }
         .manual-upload-btn {
             background: var(--primary);
             color: white;
-            padding: 10px 15px;
-            border-radius: 8px;
-            font-size: 13px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             gap: 8px;
             border: none;
+            transition: background 0.3s;
+        }
+        .manual-upload-btn:hover { background: var(--secondary); }
+        .manual-upload-section input[type="file"] {
+            display: none;
         }
         .preview-image {
             width: 100%;
-            height: 200px;
+            height: 180px;
             object-fit: cover;
             border-radius: 10px;
             margin-top: 10px;
             display: none;
+            border: 2px solid var(--success);
         }
         .preview-image.show { display: block; }
+        .confirm-upload-btn {
+            background: var(--success);
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            margin-top: 10px;
+            display: none;
+        }
+        .confirm-upload-btn.show { display: block; }
 
         /* Terms Modal */
         .terms-modal-overlay {
@@ -1106,6 +1227,36 @@
                             </div>
                         </div>
 
+                        <!-- NIC Upload Section (only for first loan) -->
+                        <div id="nic-upload-section" class="nic-upload-section" style="display: none;">
+                            <h4><i class="fas fa-id-card"></i> ජාතික හැඳුනුම්පත් තහවුරු කිරීම</h4>
+                            <p>පළමු ණය සඳහා ඔබගේ ජාතික හැඳුනුම්පතේ ඉදිරිපස සහ පසුපස ඡායාරූප උඩුගත කරන්න.</p>
+                            <div class="nic-upload-grid">
+                                <!-- Front NIC -->
+                                <div class="nic-upload-box" id="nic-front-box">
+                                    <div class="nic-success-icon"><i class="fas fa-check"></i></div>
+                                    <div class="nic-placeholder">
+                                        <i class="fas fa-id-card"></i>
+                                        <span>ඉදිරිපස</span>
+                                        <p>ඡායාරූපය උඩුගත කරන්න</p>
+                                    </div>
+                                    <img id="nic-front-preview" class="nic-preview" alt="NIC Front">
+                                    <input type="file" id="nic-front-input" accept="image/*" onchange="handleNICUpload(event, 'front')">
+                                </div>
+                                <!-- Back NIC -->
+                                <div class="nic-upload-box" id="nic-back-box">
+                                    <div class="nic-success-icon"><i class="fas fa-check"></i></div>
+                                    <div class="nic-placeholder">
+                                        <i class="fas fa-id-card"></i>
+                                        <span>පසුපස</span>
+                                        <p>ඡායාරූපය උඩුගත කරන්න</p>
+                                    </div>
+                                    <img id="nic-back-preview" class="nic-preview" alt="NIC Back">
+                                    <input type="file" id="nic-back-input" accept="image/*" onchange="handleNICUpload(event, 'back')">
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="terms-box">
                             <input type="checkbox" id="agreeTerms">
                             <label for="agreeTerms">
@@ -1231,30 +1382,26 @@
                         <div class="scan-line"></div>
                     </div>
 
-                    <!-- Manual Upload Alternative (shown when camera fails) -->
-                    <div class="manual-upload-box" id="manual-upload-box">
-                        <strong><i class="fas fa-info-circle"></i> කැමරාව ක්‍රියාත්මක නොවේ</strong>
-                        <p style="margin-top: 8px;">බ්‍රව්සරයේ ආරක්ෂක සීමාවන් හේතුවෙන් කැමරාව ක්‍රියාත්මක නොවිය හැක. කරුණාකර ඔබගේ ඡායාරූපයක් උඩුගත කරන්න.</p>
+                    <div class="selfie-status" id="selfie-status">
+                        <span class="spinner"></span> කැමරාව සූදානම් වෙමින්...
+                    </div>
+
+                    <!-- Always-visible Manual Upload Section -->
+                    <div class="manual-upload-section">
+                        <h5><i class="fas fa-upload"></i> හෝ ඡායාරූපයක් උඩුගත කරන්න</h5>
                         <label for="selfie-upload">
-                            <span class="manual-upload-btn"><i class="fas fa-upload"></i> ඡායාරූපය උඩුගත කරන්න</span>
+                            <span class="manual-upload-btn"><i class="fas fa-image"></i> ඡායාරූපය තෝරන්න</span>
                         </label>
                         <input type="file" id="selfie-upload" accept="image/*" onchange="handleSelfieUpload(event)">
                         <img id="selfie-preview" class="preview-image" alt="Preview">
-                    </div>
-
-                    <div class="selfie-status" id="selfie-status">
-                        <span class="spinner"></span> කැමරාව සූදානම් වෙමින්...
+                        <button class="confirm-upload-btn" id="btn-confirm-upload" onclick="confirmManualUpload()">
+                            <i class="fas fa-check"></i> ඡායාරූපය තහවුරු කරන්න
+                        </button>
                     </div>
                 </div>
                 <div class="selfie-footer">
                     <button class="btn-capture" id="btn-capture" onclick="captureSelfie()" disabled>
-                        <i class="fas fa-camera"></i> ඡායාරූපය ගන්න
-                    </button>
-                    <button class="btn-capture" id="btn-confirm-upload" onclick="confirmManualUpload()" style="display: none; background: var(--success);">
-                        <i class="fas fa-check"></i> ඡායාරූපය තහවුරු කරන්න
-                    </button>
-                    <button class="btn-retry" id="btn-retry" onclick="retryCamera()">
-                        <i class="fas fa-redo"></i> නැවත උත්සාහ කරන්න
+                        <i class="fas fa-camera"></i> කැමරාවෙන් ඡායාරූපය ගන්න
                     </button>
                     <button class="btn-cancel" onclick="closeSelfieModal(true)">අවලංගු කරන්න</button>
                 </div>
@@ -1288,7 +1435,7 @@
                     <h4>3. අනුමත කිරීමේ ක්‍රියාවලිය</h4>
                     <ul>
                         <li>අයදුම්පත ඉදිරිපත් කිරීමෙන් පසු, අපගේ නිලධාරීන් විසින් ඔබගේ තොරතුරු පරීක්ෂා කරනු ඇත.</li>
-                        <li>අනුමත කිරීමට පෙර සෙල්ෆි සත්‍යාපනයක් සිදු කරනු ලැබේ.</li>
+                        <li>පළමු ණය සඳහා ජාතික හැඳුනුම්පත් තහවුරු කිරීම සහ සෙල්ෆි සත්‍යාපනය අවශ්‍ය වේ.</li>
                         <li>අනුමත කිරීමෙන් පසු, ණය මුදල ඔබගේ ගිණුමට බැර කරනු ලැබේ.</li>
                     </ul>
 
@@ -1321,6 +1468,8 @@
         let pendingLoanData = null;
         let cameraReady = false;
         let manualUploadImage = null;
+        let nicFrontImage = null;
+        let nicBackImage = null;
 
         // ================= Auth Functions =================
         
@@ -1461,6 +1610,41 @@
             updateProfileImages(userData);
             renderAllLoans();
             checkApplyWarning();
+            checkFirstLoan();
+        }
+
+        // ================= Check First Loan =================
+        function checkFirstLoan() {
+            const loans = JSON.parse(localStorage.getItem('userLoans')) || [];
+            // If no loans exist, it's the first loan
+            const isFirstLoan = loans.length === 0;
+            
+            const nicSection = document.getElementById('nic-upload-section');
+            if (isFirstLoan) {
+                nicSection.style.display = 'block';
+            } else {
+                nicSection.style.display = 'none';
+            }
+        }
+
+        // ================= NIC Upload Handler =================
+        function handleNICUpload(event, side) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                if (side === 'front') {
+                    nicFrontImage = e.target.result;
+                    document.getElementById('nic-front-preview').src = e.target.result;
+                    document.getElementById('nic-front-box').classList.add('uploaded');
+                } else {
+                    nicBackImage = e.target.result;
+                    document.getElementById('nic-back-preview').src = e.target.result;
+                    document.getElementById('nic-back-box').classList.add('uploaded');
+                }
+            };
+            reader.readAsDataURL(file);
         }
 
         // ================= Profile Images =================
@@ -1517,6 +1701,7 @@
 
             if (pageId === 'apply') {
                 checkApplyWarning();
+                checkFirstLoan();
             }
 
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1579,7 +1764,17 @@
                 return;
             }
 
+            // Check if first loan - NIC images required
             const loans = JSON.parse(localStorage.getItem('userLoans')) || [];
+            const isFirstLoan = loans.length === 0;
+            
+            if (isFirstLoan) {
+                if (!nicFrontImage || !nicBackImage) {
+                    showModal('warning', 'ජාතික හැඳුනුම්පත් අවශ්‍යයි', 'පළමු ණය සඳහා ජාතික හැඳුනුම්පතේ ඉදිරිපස සහ පසුපස ඡායාරූප දෙකම උඩුගත කළ යුතුය.');
+                    return;
+                }
+            }
+
             const hasActiveOrPending = loans.some(l => l.status === 'Approved' || l.status === 'Active' || l.status === 'Pending Approval');
             
             if (hasActiveOrPending) {
@@ -1604,13 +1799,15 @@
                 duration: duration,
                 interest: totalInterest,
                 total: totalPayable,
-                nextPaymentDate: formattedDate
+                nextPaymentDate: formattedDate,
+                nicFront: nicFrontImage,
+                nicBack: nicBackImage
             };
 
             openSelfieModal();
         }
 
-        // ================= Selfie Verification (Enhanced) =================
+        // ================= Selfie Verification =================
         function openSelfieModal() {
             cameraReady = false;
             manualUploadImage = null;
@@ -1619,11 +1816,9 @@
             // Reset UI
             document.getElementById('btn-capture').disabled = true;
             document.getElementById('btn-capture').style.display = 'block';
-            document.getElementById('btn-retry').classList.remove('show');
-            document.getElementById('manual-upload-box').classList.remove('show');
-            document.getElementById('btn-confirm-upload').style.display = 'none';
             document.getElementById('selfie-preview').classList.remove('show');
-            document.getElementById('camera-preview-box').style.display = 'flex';
+            document.getElementById('btn-confirm-upload').classList.remove('show');
+            document.getElementById('selfie-upload').value = '';
             
             startCamera();
         }
@@ -1632,14 +1827,9 @@
             const video = document.getElementById('selfie-video');
             const status = document.getElementById('selfie-status');
             const captureBtn = document.getElementById('btn-capture');
-            const retryBtn = document.getElementById('btn-retry');
-            const manualBox = document.getElementById('manual-upload-box');
 
             status.innerHTML = '<span class="spinner"></span> කැමරාව සූදානම් වෙමින්...';
             captureBtn.disabled = true;
-            captureBtn.style.display = 'block';
-            retryBtn.classList.remove('show');
-            manualBox.classList.remove('show');
             cameraReady = false;
 
             // Stop any existing stream
@@ -1648,26 +1838,10 @@
                 selfieStream = null;
             }
 
-            // Check protocol - Camera requires HTTPS or localhost (not file://)
-            const isSecure = window.location.protocol === 'https:' || 
-                             window.location.hostname === 'localhost' || 
-                             window.location.hostname === '127.0.0.1';
-
             // Check if camera API is available
             if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-                status.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> මෙම බ්‍රව්සරයේ කැමරාව භාවිතා කළ නොහැක.';
-                captureBtn.style.display = 'none';
-                retryBtn.classList.add('show');
-                manualBox.classList.add('show');
-                return;
-            }
-
-            // If file:// protocol, show manual upload option immediately
-            if (!isSecure && window.location.protocol === 'file:') {
-                status.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: var(--warning);"></i> බ්‍රව්සරයේ ආරක්ෂක සීමාවන් හේතුවෙන් කැමරාව ක්‍රියාත්මක නොවේ. කරුණාකර ඡායාරූපයක් උඩුගත කරන්න.';
-                captureBtn.style.display = 'none';
-                retryBtn.classList.add('show');
-                manualBox.classList.add('show');
+                status.innerHTML = '<i class="fas fa-info-circle" style="color: var(--warning);"></i> කැමරාව භාවිතා කළ නොහැක. කරුණාකර ඡායාරූපයක් උඩුගත කරන්න.';
+                captureBtn.disabled = true;
                 return;
             }
 
@@ -1696,40 +1870,21 @@
                     })
                     .catch(err => {
                         console.error('Video play error:', err);
-                        status.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> වීඩියෝ ප්‍රදර්ශනය කිරීමට නොහැක.';
-                        captureBtn.style.display = 'none';
-                        retryBtn.classList.add('show');
-                        manualBox.classList.add('show');
+                        status.innerHTML = '<i class="fas fa-info-circle" style="color: var(--warning);"></i> කැමරාව භාවිතා කළ නොහැක. කරුණාකර ඡායාරූපයක් උඩුගත කරන්න.';
+                        captureBtn.disabled = true;
                     });
             })
             .catch(function(error) {
                 console.error('Camera error:', error);
-                
-                let errorMsg = 'කැමරාව විවෘත කිරීමට නොහැක. ';
-                if (error.name === 'NotAllowedError' || error.name === 'PermissionDeniedError') {
-                    errorMsg += 'කරුණාකර කැමරා අවසරය ලබා දෙන්න.';
-                } else if (error.name === 'NotFoundError' || error.name === 'DevicesNotFoundError') {
-                    errorMsg += 'මෙම උපාංගයේ කැමරාවක් හමු නොවීය.';
-                } else if (error.name === 'NotReadableError') {
-                    errorMsg += 'කැමරාව වෙනත් යෙදුමක භාවිතයේ ඇත.';
-                } else {
-                    errorMsg += 'නැවත උත්සාහ කරන්න හෝ ඡායාරූපයක් උඩුගත කරන්න.';
-                }
-                
-                status.innerHTML = `<i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> ${errorMsg}`;
-                captureBtn.style.display = 'none';
-                retryBtn.classList.add('show');
-                manualBox.classList.add('show');
+                // Camera not available - show message to use upload
+                status.innerHTML = '<i class="fas fa-info-circle" style="color: var(--warning);"></i> කැමරාව භාවිතා කළ නොහැක. කරුණාකර ඡායාරූපයක් උඩුගත කරන්න.';
+                captureBtn.disabled = true;
             });
-        }
-
-        function retryCamera() {
-            startCamera();
         }
 
         function captureSelfie() {
             if (!cameraReady || !selfieStream) {
-                showModal('warning', 'කැමරාව සූදානම් නැත', 'කරුණාකර කැමරාව සූදානම් වන තෙක් රැඳී සිටින්න.');
+                showModal('warning', 'කැමරාව සූදානම් නැත', 'කරුණාකර කැමරාව සූදානම් වන තෙක් රැඳී සිටින්න හෝ ඡායාරූපයක් උඩුගත කරන්න.');
                 return;
             }
 
@@ -1760,10 +1915,8 @@
                     preview.src = e.target.result;
                     preview.classList.add('show');
                     
-                    document.getElementById('camera-preview-box').style.display = 'none';
-                    document.getElementById('btn-confirm-upload').style.display = 'block';
+                    document.getElementById('btn-confirm-upload').classList.add('show');
                     document.getElementById('btn-capture').style.display = 'none';
-                    document.getElementById('btn-retry').style.display = 'none';
                     
                     document.getElementById('selfie-status').innerHTML = '<i class="fas fa-check-circle" style="color: var(--success);"></i> ඡායාරූපය උඩුගත කරන ලදී. තහවුරු කරන්න.';
                 };
@@ -1819,13 +1972,23 @@
                 total: pendingLoanData.total,
                 nextPaymentDate: pendingLoanData.nextPaymentDate,
                 status: 'Pending Approval',
-                appliedDate: new Date().toISOString().split('T')[0]
+                appliedDate: new Date().toISOString().split('T')[0],
+                nicFront: pendingLoanData.nicFront,
+                nicBack: pendingLoanData.nicBack
             };
 
             loans.push(newLoan);
             localStorage.setItem('userLoans', JSON.stringify(loans));
 
             pendingLoanData = null;
+            nicFrontImage = null;
+            nicBackImage = null;
+
+            // Reset NIC upload UI
+            document.getElementById('nic-front-box').classList.remove('uploaded');
+            document.getElementById('nic-back-box').classList.remove('uploaded');
+            document.getElementById('nic-front-input').value = '';
+            document.getElementById('nic-back-input').value = '';
 
             showModal(
                 'success', 
@@ -1866,8 +2029,15 @@
             document.getElementById('loan-summary').style.display = 'none';
             document.getElementById('submit-btn').style.display = 'none';
             
+            // Reset NIC upload UI
+            document.getElementById('nic-front-box').classList.remove('uploaded');
+            document.getElementById('nic-back-box').classList.remove('uploaded');
+            nicFrontImage = null;
+            nicBackImage = null;
+            
             renderAllLoans();
             checkApplyWarning();
+            checkFirstLoan();
             
             const homeNav = document.querySelector('.nav-item');
             switchTab('home', homeNav);
@@ -1892,6 +2062,7 @@
 
                 renderAllLoans();
                 checkApplyWarning();
+                checkFirstLoan();
 
                 showModal('success', 'ඉවත් කරන ලදී!', 'ඔබගේ ණය අයදුම්පත සාර්ථකව ඉවත් කරන ලදී.');
             }
