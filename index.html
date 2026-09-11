@@ -1,2094 +1,1927 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>XTREME AVIATOR SHA512 HASH ULTRA PREDICTOR PRO</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    :root {
-      --primary: #3a86ff;
-      --primary-dark: #2667cc;
-      --secondary: #8338ec;
-      --danger: #ff006e;
-      --success: #06d6a0;
-      --warning: #ffbe0b;
-      --dark-1: #0a0e17;
-      --dark-2: #121827;
-      --dark-3: #1e2538;
-      --light-1: #f8f9fa;
-      --light-2: #e9ecef;
-      --accent: #3a86ff;
-      --extreme: #ff00ff;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="theme-color" content="#0B2240">
+    <title>Nilantha Loan Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    
-    body {
-      background: linear-gradient(135deg, var(--dark-1), var(--dark-2));
-      color: var(--light-1);
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      touch-action: manipulation;
-    }
-    
-    .main-container {
-      width: 100%;
-      max-width: 900px;
-      background: var(--dark-2);
-      border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      position: relative;
-    }
-    
-    .header {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      padding: 20px;
-      text-align: center;
-    }
-    
-    .header h1 {
-      font-weight: 600;
-      font-size: 1.8rem;
-      margin-bottom: 5px;
-      line-height: 1.3;
-    }
-    
-    .header p {
-      opacity: 0.9;
-      font-size: 0.9rem;
-    }
-    
-    .datetime {
-      display: flex;
-      justify-content: space-between;
-      background: rgba(0, 0, 0, 0.2);
-      padding: 10px 20px;
-      font-size: 0.9rem;
-    }
-    
-    .content {
-      padding: 25px;
-    }
-    
-    .input-group {
-      margin-bottom: 20px;
-      position: relative;
-    }
-    
-    .input-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 500;
-      font-size: 0.9rem;
-      color: var(--light-2);
-    }
-    
-    #hashInput {
-      width: 100%;
-      padding: 14px 16px;
-      background: var(--dark-3);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      color: var(--light-1);
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      -webkit-user-select: text;
-      -moz-user-select: text;
-      -ms-user-select: text;
-      user-select: text;
-    }
-    
-    #hashInput:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
-    }
-    
-    .input-actions {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 10px;
-      gap: 10px;
-    }
-    
-    .paste-btn {
-      background: rgba(58, 134, 255, 0.2);
-      color: var(--primary);
-      border: none;
-      border-radius: 8px;
-      padding: 10px 15px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex: 1;
-      justify-content: center;
-    }
-    
-    .paste-btn:hover {
-      background: rgba(58, 134, 255, 0.3);
-    }
-    
-    .clear-btn {
-      background: rgba(255, 0, 110, 0.2);
-      color: var(--danger);
-      border: none;
-      border-radius: 8px;
-      padding: 10px 15px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex: 1;
-      justify-content: center;
-    }
-    
-    .clear-btn:hover {
-      background: rgba(255, 0, 110, 0.3);
-    }
-    
-    .odd-buttons {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 12px;
-      margin: 25px 0;
-    }
-    
-    .odd-btn {
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: var(--dark-3);
-      color: var(--light-1);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .odd-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-    
-    .odd-btn:nth-child(1) { border-top: 3px solid var(--success); }
-    .odd-btn:nth-child(2) { border-top: 3px solid var(--warning); }
-    .odd-btn:nth-child(3) { border-top: 3px solid #ff9e00; }
-    .odd-btn:nth-child(4) { border-top: 3px solid var(--secondary); }
-    .odd-btn:nth-child(5) { border-top: 3px solid var(--danger); }
-    .odd-btn:nth-child(6) { border-top: 3px solid var(--extreme); }
-    
-    .odd-btn span:first-child {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 3px;
-      z-index: 2;
-    }
-    
-    .odd-btn span:last-child {
-      font-size: 0.8rem;
-      opacity: 0.8;
-      z-index: 2;
-    }
-    
-    .confidence-bar {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 4px;
-      transition: width 0.5s ease;
-    }
-    
-    #confidence-2 { background: var(--success); }
-    #confidence-3 { background: var(--warning); }
-    #confidence-4 { background: #ff9e00; }
-    #confidence-7 { background: var(--secondary); }
-    #confidence-10 { background: var(--danger); }
-    #confidence-100 { background: var(--extreme); }
-    
-    .results {
-      background: var(--dark-3);
-      border-radius: 10px;
-      padding: 20px;
-      margin-top: 25px;
-      border-left: 4px solid var(--primary);
-    }
-    
-    .result-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    
-    .result-item:last-child {
-      border-bottom: none;
-    }
-    
-    .result-item .label {
-      color: var(--light-2);
-      font-weight: 500;
-    }
-    
-    .result-item .value {
-      font-weight: 600;
-    }
-    
-    .countdown {
-      background: rgba(6, 214, 160, 0.1);
-      border-left: 4px solid var(--success);
-      padding: 15px;
-      border-radius: 8px;
-      margin: 20px 0;
-      text-align: center;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-    }
-    
-    .countdown.warning {
-      background: rgba(255, 190, 11, 0.1);
-      border-left: 4px solid var(--warning);
-    }
-    
-    .countdown.danger {
-      background: rgba(255, 0, 110, 0.1);
-      border-left: 4px solid var(--danger);
-    }
-    
-    .countdown.extreme {
-      background: rgba(255, 0, 255, 0.1);
-      border-left: 4px solid var(--extreme);
-    }
-    
-    .history-container {
-      margin-top: 30px;
-    }
-    
-    .history-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-    
-    .history-header h3 {
-      font-weight: 500;
-    }
-    
-    .history-clear-btn {
-      background: transparent;
-      color: var(--danger);
-      border: 1px solid var(--danger);
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 0.8rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    
-    .history-clear-btn:hover {
-      background: rgba(255, 0, 110, 0.1);
-    }
-    
-    .history-list {
-      background: var(--dark-3);
-      border-radius: 10px;
-      overflow: hidden;
-      max-height: 300px;
-      overflow-y: auto;
-    }
-    
-    .history-item {
-      padding: 15px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      display: grid;
-      grid-template-columns: 1fr 1fr auto;
-      gap: 10px;
-      align-items: center;
-      transition: all 0.2s ease;
-      position: relative;
-    }
-    
-    .history-item.active {
-      background: rgba(6, 214, 160, 0.05);
-      border-left: 3px solid var(--success);
-    }
-    
-    .history-item.success {
-      background: rgba(6, 214, 160, 0.05);
-    }
-    
-    .history-item.failure {
-      background: rgba(255, 0, 110, 0.05);
-    }
-    
-    .history-item.extreme {
-      background: rgba(255, 0, 255, 0.05);
-    }
-    
-    .history-item:last-child {
-      border-bottom: none;
-    }
-    
-    .history-time {
-      font-size: 0.9rem;
-      color: var(--light-2);
-    }
-    
-    .history-multiplier {
-      font-weight: 600;
-      text-align: center;
-    }
-    
-    .history-multiplier span {
-      display: inline-block;
-      padding: 3px 8px;
-      border-radius: 4px;
-      font-size: 0.8rem;
-    }
-    
-    .history-multiplier-2 span { background: rgba(6, 214, 160, 0.2); color: var(--success); }
-    .history-multiplier-3 span { background: rgba(255, 190, 11, 0.2); color: var(--warning); }
-    .history-multiplier-4 span { background: rgba(255, 158, 0, 0.2); color: #ff9e00; }
-    .history-multiplier-7 span { background: rgba(131, 56, 236, 0.2); color: var(--secondary); }
-    .history-multiplier-10 span { background: rgba(255, 0, 110, 0.2); color: var(--danger); }
-    .history-multiplier-100 span { background: rgba(255, 0, 255, 0.2); color: var(--extreme); }
-    
-    .history-details {
-      text-align: right;
-      font-size: 0.85rem;
-    }
-    
-    .history-details span {
-      display: block;
-      margin-bottom: 3px;
-    }
-    
-    .copy-btn {
-      background: rgba(58, 134, 255, 0.2);
-      color: var(--primary);
-      border: none;
-      border-radius: 4px;
-      padding: 8px 12px;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      margin-left: 10px;
-    }
-    
-    .copy-btn:hover {
-      background: rgba(58, 134, 255, 0.3);
-    }
+    <style>
+        :root {
+            --primary: #0B2240;
+            --secondary: #123B6B;
+            --accent: #FFC107;
+            --success: #28A745;
+            --danger: #DC3545;
+            --warning: #FFC107;
+            --light: #F4F7FB;
+            --white: #FFFFFF;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --border: #E0E6ED;
+        }
 
-    .copy-result-btn {
-      background: rgba(58, 134, 255, 0.2);
-      color: var(--primary);
-      border: none;
-      border-radius: 8px;
-      padding: 10px 15px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 15px;
-      width: 100%;
-    }
-    
-    .copy-result-btn:hover {
-      background: rgba(58, 134, 255, 0.3);
-    }
-    
-    .copy-result-btn:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-    
-    .stats-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin: 20px 0;
-    }
-    
-    .stat-card {
-      background: var(--dark-3);
-      border-radius: 10px;
-      padding: 15px;
-      text-align: center;
-    }
-    
-    .stat-card h4 {
-      font-size: 0.9rem;
-      color: var(--light-2);
-      margin-bottom: 8px;
-    }
-    
-    .stat-card .value {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-    
-    .stat-card.success .value {
-      color: var(--success);
-    }
-    
-    .stat-card.warning .value {
-      color: var(--warning);
-    }
-    
-    .stat-card.danger .value {
-      color: var(--danger);
-    }
-    
-    .stat-card.extreme .value {
-      color: var(--extreme);
-    }
-    
-    .footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 0.8rem;
-      color: var(--light-2);
-      opacity: 0.7;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    
-    @media (max-width: 768px) {
-      .odd-buttons {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      
-      .history-item {
-        grid-template-columns: 1fr 1fr;
-      }
-      
-      .history-details {
-        grid-column: span 2;
-        text-align: left;
-        margin-top: 8px;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Noto Sans Sinhala', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            touch-action: pan-x pan-y;
+        }
 
-      .copy-btn {
-        position: static;
-        margin-top: 10px;
-        width: 100%;
-        justify-content: center;
-        margin-left: 0;
-      }
-      
-      .stats-container {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .header h1 {
-        font-size: 1.4rem;
-        padding-top: 10px;
-      }
-      
-      .header p {
-        font-size: 0.8rem;
-      }
-      
-      .content {
-        padding: 20px 15px;
-      }
-      
-      .input-actions {
-        flex-direction: column;
-      }
-      
-      .odd-buttons {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    
-    /* Animation for active signal */
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(6, 214, 160, 0.4); }
-      70% { box-shadow: 0 0 0 10px rgba(6, 214, 160, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(6, 214, 160, 0); }
-    }
-    
-    .active-signal {
-      animation: pulse 2s infinite;
-    }
+        body {
+            background-color: #e0e5ec;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
 
-    /* Custom Dialog Styles */
-    .dialog-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.7);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
+        .app-container {
+            width: 100%;
+            max-width: 480px;
+            background-color: var(--light);
+            position: relative;
+            height: 100vh;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
 
-    .dialog-overlay.active {
-      opacity: 1;
-      pointer-events: all;
-    }
+        .app-container::-webkit-scrollbar { display: none; }
+        .app-container { -ms-overflow-style: none; scrollbar-width: none; }
 
-    .dialog-box {
-      background: var(--dark-2);
-      border-radius: 10px;
-      padding: 20px;
-      width: 90%;
-      max-width: 400px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      transform: translateY(20px);
-      transition: transform 0.3s ease;
-    }
+        /* ================= Auth Screen ================= */
+        #auth-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 30px;
+            transition: transform 0.5s ease-in-out;
+            overflow-y: auto;
+        }
 
-    .dialog-overlay.active .dialog-box {
-      transform: translateY(0);
-    }
+        #auth-screen.hidden { transform: translateX(-100%); }
 
-    .dialog-title {
-      font-size: 1.2rem;
-      margin-bottom: 15px;
-      color: var(--light-1);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+        .auth-header { text-align: center; margin-bottom: 25px; }
+        .auth-header i { font-size: 50px; color: var(--accent); margin-bottom: 15px; }
+        .auth-header h1 { font-size: 24px; color: var(--primary); margin-bottom: 5px; }
+        .auth-header p { font-size: 14px; color: var(--text-light); }
 
-    .dialog-message {
-      margin-bottom: 20px;
-      color: var(--light-2);
-      line-height: 1.5;
-    }
+        .auth-tabs {
+            display: flex;
+            background: var(--light);
+            border-radius: 12px;
+            padding: 5px;
+            margin-bottom: 25px;
+        }
+        .auth-tab {
+            flex: 1;
+            padding: 12px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-light);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .auth-tab.active {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 4px 10px rgba(11, 34, 64, 0.2);
+        }
 
-    .dialog-buttons {
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-    }
+        .auth-form { display: none; }
+        .auth-form.active { display: block; }
 
-    .dialog-btn {
-      padding: 8px 15px;
-      border-radius: 5px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
+        .input-group { margin-bottom: 15px; }
+        .input-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 14px;
+            outline: none;
+            transition: border 0.3s;
+            background: var(--light);
+        }
+        .input-group input:focus { border-color: var(--primary); background: var(--white); }
 
-    .dialog-btn-cancel {
-      background: var(--dark-3);
-      color: var(--light-1);
-      border: 1px solid var(--dark-3);
-    }
+        .btn-primary {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .btn-primary:hover { background-color: var(--secondary); }
+        .btn-danger { background-color: var(--danger); }
+        .btn-danger:hover { background-color: #c82333; }
 
-    .dialog-btn-cancel:hover {
-      background: var(--dark-1);
-    }
+        .error-msg {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            margin-bottom: 15px;
+            display: none;
+        }
+        .error-msg.show { display: block; }
 
-    .dialog-btn-confirm {
-      background: var(--danger);
-      color: white;
-      border: 1px solid var(--danger);
-    }
+        .success-msg {
+            background: #d4edda;
+            color: #155724;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            margin-bottom: 15px;
+            display: none;
+        }
+        .success-msg.show { display: block; }
 
-    .dialog-btn-confirm:hover {
-      background: #e00064;
-    }
+        /* ================= Main App ================= */
+        #main-app { display: none; padding-bottom: 80px; }
+        #main-app.active { display: block; }
 
-    .dialog-icon {
-      font-size: 1.5rem;
-      color: var(--danger);
-    }
-    
-    /* Loading spinner */
-    .spinner {
-      width: 20px;
-      height: 20px;
-      border: 3px solid rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      border-top-color: var(--primary);
-      animation: spin 1s ease-in-out infinite;
-      display: inline-block;
-    }
-    
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-    
-    /* Tooltip */
-    .tooltip {
-      position: relative;
-      display: inline-block;
-    }
-    
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 200px;
-      background-color: var(--dark-1);
-      color: var(--light-1);
-      text-align: center;
-      border-radius: 6px;
-      padding: 8px;
-      position: absolute;
-      z-index: 1;
-      bottom: 125%;
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      transition: opacity 0.3s;
-      font-size: 0.8rem;
-      border: 1px solid var(--dark-3);
-    }
-    
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
+        .app-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
 
-    /* New styles for actual multiplier display */
-    .actual-multiplier {
-      margin-left: 8px;
-      font-size: 0.8em;
-    }
-    
-    .actual-multiplier-2 { color: var(--success); }
-    .actual-multiplier-3 { color: var(--warning); }
-    .actual-multiplier-4 { color: #ff9e00; }
-    .actual-multiplier-7 { color: var(--secondary); }
-    .actual-multiplier-10 { color: var(--danger); }
-    .actual-multiplier-100 { color: var(--extreme); }
+        .logo-area { display: flex; align-items: center; gap: 10px; }
+        .logo-icon { color: var(--accent); font-size: 26px; }
+        .logo-text h1 { font-size: 16px; line-height: 1.2; }
+        .logo-text h1 span { color: var(--accent); }
+        .header-icons { display: flex; gap: 15px; font-size: 20px; }
 
-    /* Disclaimer badge */
-    .disclaimer-badge {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: rgba(255, 0, 110, 0.2);
-      color: var(--danger);
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 9999;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
-    }
+        .page { display: none; animation: fadeIn 0.3s ease; padding: 15px; }
+        .page.active { display: block; }
 
-    .disclaimer-badge:hover {
-      background: rgba(255, 0, 110, 0.3);
-      transform: scale(1.1);
-    }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    /* Disclaimer popup */
-    .disclaimer-popup {
-      position: fixed;
-      bottom: 70px;
-      right: 20px;
-      width: 300px;
-      max-width: 90%;
-      background: var(--dark-2);
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      border-left: 4px solid var(--danger);
-      transform: translateY(20px);
-      opacity: 0;
-      transition: all 0.3s ease;
-      z-index: 9998;
-      pointer-events: none;
-    }
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 220px;
+            background: url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop') center/cover;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
 
-    .disclaimer-popup.show {
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: all;
-    }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(11, 34, 64, 0.95), rgba(11, 34, 64, 0.6));
+            z-index: 1;
+        }
 
-    .disclaimer-popup h4 {
-      color: var(--danger);
-      margin-bottom: 10px;
-      font-size: 1rem;
-    }
+        .hero-content { position: relative; z-index: 3; color: white; width: 60%; padding-bottom: 10px; }
+        .hero-content p:first-child { font-size: 14px; margin-bottom: 2px; }
+        .hero-content h2 { font-size: 28px; color: var(--accent); margin-bottom: 2px; line-height: 1.1; }
+        .hero-content .subtitle { font-size: 12px; margin-bottom: 8px; }
+        .interest-badge {
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+        .quote { font-size: 11px; font-style: italic; line-height: 1.4; color: #e0e0e0; }
 
-    .disclaimer-popup p {
-      font-size: 0.8rem;
-      line-height: 1.4;
-      color: var(--light-2);
-      margin-bottom: 10px;
-    }
+        .hero-image-container {
+            position: relative;
+            z-index: 3;
+            width: 35%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 100%;
+            padding-bottom: 10px;
+        }
 
-    .disclaimer-popup a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 500;
-    }
+        .hero-img-person {
+            width: 100%;
+            max-width: 120px;
+            height: auto;
+            border-radius: 15px;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
 
-    .disclaimer-popup a:hover {
-      text-decoration: underline;
-    }
+        .hero-img-money {
+            position: absolute;
+            bottom: 10px;
+            right: 0;
+            width: 50px;
+            z-index: 4;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+        }
 
-    /* Premium Signal Popup Styles (from popup htmlviewer.html) */
-    .signal-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(8px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 2000;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s ease-out;
-    }
-    
-    .signal-container.active {
-      opacity: 1;
-      pointer-events: all;
-    }
-    
-    .signal-card {
-      width: 100%;
-      max-width: 440px;
-      background: linear-gradient(145deg, #1e293b, #0f172a);
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
-      overflow: hidden;
-      transform: translateY(20px) scale(0.98);
-      opacity: 0;
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.2);
-    }
-    
-    .signal-container.active .signal-card {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-    }
-    
-    /* Header Section */
-    .signal-header {
-      padding: 24px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    
-    .signal-header::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 24px;
-      right: 24px;
-      height: 2px;
-      background: linear-gradient(90deg, var(--primary), rgba(58, 134, 255, 0.3));
-      opacity: 0.3;
-    }
-    
-    .signal-title {
-      font-size: 1.5rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      transform: translateY(5px);
-    }
-    
-    .signal-title i {
-      color: white;
-      font-size: 1.2em;
-    }
-    
-    .close-btn {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.2);
-      border: none;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      transform: translateY(5px);
-    }
-    
-    .close-btn:hover {
-      background: var(--danger);
-      transform: translateY(5px) rotate(90deg);
-    }
-    
-    /* Signal Meta Section */
-    .signal-meta {
-      display: flex;
-      justify-content: space-between;
-      padding: 30px 24px 0;
-    }
-    
-    .meta-item {
-      text-align: center;
-      flex: 1;
-    }
-    
-    .meta-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      opacity: 0.7;
-      margin-bottom: 6px;
-    }
-    
-    .meta-value {
-      font-size: 1.4rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-    }
-    
-    .meta-value.time {
-      color: var(--warning);
-    }
-    
-    .meta-value.odd {
-      color: var(--success);
-      font-size: 1.8rem;
-    }
-    
-    /* Countdown Section */
-    .countdown-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 20px 0;
-    }
-    
-    .countdown-circle {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.08);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      border: 3px solid var(--danger);
-      box-shadow: 0 0 20px rgba(255, 32, 110, 0.3);
-      margin-bottom: 10px;
-    }
-    
-    .countdown-circle::before {
-      content: '';
-      position: absolute;
-      width: calc(100% + 10px);
-      height: calc(100% + 10px);
-      border-radius: 50%;
-      border: 3px solid transparent;
-      border-top-color: var(--primary);
-      animation: spin 2s linear infinite;
-    }
-    
-    #countdown-timer {
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--danger);
-      line-height: 1;
-      z-index: 1;
-    }
-    
-    .countdown-label {
-      font-size: 0.9rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--danger);
-      margin-top: 5px;
-    }
-    
-    /* Strategy Section */
-    .strategy-section {
-      background: rgba(6, 214, 160, 0.05);
-      border-top: 1px solid rgba(6, 214, 160, 0.1);
-      border-bottom: 1px solid rgba(6, 214, 160, 0.1);
-      margin: 20px 0;
-      padding: 24px;
-      position: relative;
-    }
-    
-    .strategy-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 24px;
-      right: 24px;
-      height: 2px;
-      background: linear-gradient(90deg, var(--success), rgba(6, 214, 160, 0.3));
-    }
-    
-    .strategy-title {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--success);
-    }
-    
-    .strategy-title i {
-      color: var(--success);
-    }
-    
-    .strategy-steps {
-      display: grid;
-      gap: 16px;
-    }
-    
-    .strategy-step {
-      display: flex;
-      gap: 12px;
-      font-size: 0.92rem;
-      line-height: 1.5;
-    }
-    
-    .step-number {
-      flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: rgba(6, 214, 160, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
-      font-weight: 700;
-      color: var(--success);
-    }
-    
-    .highlight {
-      font-weight: 700;
-      color: var(--warning);
-    }
-    
-    /* Footer */
-    .signal-footer {
-      text-align: center;
-      padding: 0 24px 24px;
-      font-size: 0.9rem;
-      color: rgba(255, 255, 255, 0.6);
-      font-weight: 500;
-      line-height: 1.4;
-    }
-    
-    .footer-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 4px;
-      letter-spacing: 0.5px;
-    }
-    
-    .footer-subtitle {
-      font-size: 0.75rem;
-      opacity: 0.6;
-    }
-    
-    /* Responsive */
-    @media (max-width: 480px) {
-      .signal-card {
-        max-width: 90%;
-        border-radius: 16px;
-      }
-      
-      .signal-header {
-        padding: 20px;
-      }
-      
-      .signal-title {
-        font-size: 1.3rem;
-      }
-      
-      .signal-meta {
-        padding: 20px 20px 0;
-      }
-      
-      .meta-value {
-        font-size: 1.2rem;
-      }
-      
-      .meta-value.odd {
-        font-size: 1.5rem;
-      }
-      
-      .countdown-circle {
-        width: 100px;
-        height: 100px;
-      }
-      
-      #countdown-timer {
-        font-size: 1.8rem;
-      }
-      
-      .strategy-section {
-        padding: 20px;
-      }
-    }
-  </style>
+        .welcome-card {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(11, 34, 64, 0.2);
+        }
+
+        .welcome-text h2 { font-size: 18px; margin-bottom: 5px; }
+        .welcome-text p { font-size: 12px; color: #ccc; }
+
+        .profile-img-circle {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            background-color: var(--secondary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .profile-img-circle img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Loan Cards */
+        .loan-card {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary);
+        }
+        .loan-card.pending { border-left-color: var(--warning); }
+        .loan-card.active { border-left-color: var(--success); }
+
+        .loan-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .loan-card-header h3 {
+            font-size: 16px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .loan-card-header h3 i { color: var(--accent); }
+
+        .loan-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 15px;
+        }
+        .detail-item { display: flex; align-items: center; gap: 12px; }
+        .detail-icon {
+            font-size: 20px;
+            color: var(--primary);
+            background: var(--light);
+            padding: 8px;
+            border-radius: 10px;
+        }
+        .detail-text p { font-size: 10px; color: var(--text-light); }
+        .detail-text h4 { font-size: 15px; font-weight: 700; color: var(--text-dark); }
+
+        .status-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+        .status-item { display: flex; flex-direction: column; gap: 3px; }
+        .status-item i { font-size: 16px; color: var(--primary); margin-bottom: 3px; }
+        .status-item p { font-size: 9px; color: var(--text-light); }
+        .status-item h4 { font-size: 11px; font-weight: 600; color: var(--text-dark); margin-bottom: 3px; }
+
+        .badge {
+            font-size: 9px;
+            padding: 3px 8px;
+            border-radius: 10px;
+            display: inline-block;
+            width: fit-content;
+            font-weight: 600;
+        }
+        .badge-green { background-color: #d4edda; color: #155724; }
+        .badge-blue { background-color: #cce5ff; color: #004085; }
+        .badge-yellow { background-color: #fff3cd; color: #856404; }
+
+        .empty-state {
+            text-align: center;
+            padding: 30px 15px;
+            background: var(--white);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .empty-state i { font-size: 50px; color: #ccc; margin-bottom: 15px; }
+        .empty-state h3 { color: var(--text-dark); margin-bottom: 10px; }
+        .empty-state p { color: var(--text-light); font-size: 14px; margin-bottom: 15px; line-height: 1.5; }
+
+        .contact-section {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 2px dashed var(--accent);
+        }
+        .contact-section h4 { color: var(--primary); margin-bottom: 10px; font-size: 16px; }
+        .contact-section p { font-size: 13px; color: var(--text-light); margin-bottom: 15px; }
+
+        .contact-number {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(11, 34, 64, 0.3);
+        }
+        .contact-number i { color: var(--accent); font-size: 24px; }
+
+        /* Form */
+        .form-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .form-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            font-size: 14px;
+            outline: none;
+            background: var(--light);
+            transition: border 0.3s;
+        }
+        .form-control:focus { border-color: var(--primary); background: var(--white); }
+        .form-control[readonly] { background-color: #e9ecef; color: var(--text-dark); font-weight: 600; }
+
+        .summary-box {
+            background: var(--light);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent);
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .summary-row:last-child {
+            margin-bottom: 0;
+            border-top: 1px dashed var(--border);
+            padding-top: 10px;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 16px;
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            line-height: 1.5;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+        .warning-box i { font-size: 20px; margin-top: 2px; }
+
+        .terms-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: var(--light);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+        .terms-box input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            accent-color: var(--primary);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        .terms-box label {
+            font-size: 13px;
+            color: var(--text-dark);
+            line-height: 1.5;
+            cursor: pointer;
+        }
+        .terms-box .terms-link {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Bottom Nav */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 480px;
+            background-color: var(--white);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            border-top: 1px solid var(--border);
+            z-index: 1000;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.05);
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--text-light);
+            font-size: 11px;
+            gap: 5px;
+            cursor: pointer;
+            width: 20%;
+        }
+        .nav-item i { font-size: 22px; }
+        .nav-item.active { color: var(--primary); }
+        .nav-item.active i { color: var(--primary); }
+        .nav-fab { position: relative; top: -25px; }
+        .fab-button {
+            width: 55px;
+            height: 55px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            font-size: 26px;
+            box-shadow: 0 6px 15px rgba(11, 34, 64, 0.3);
+            border: 5px solid var(--white);
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+        .modal-overlay.active { display: flex; }
+
+        .modal-box {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 350px;
+            animation: popIn 0.3s ease;
+        }
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .modal-icon { font-size: 60px; color: var(--success); margin-bottom: 15px; }
+        .modal-icon.warning { color: var(--warning); }
+        .modal-box h3 { font-size: 20px; color: var(--text-dark); margin-bottom: 10px; }
+        .modal-box p { font-size: 14px; color: var(--text-light); margin-bottom: 20px; line-height: 1.5; }
+
+        .cancel-btn {
+            background: transparent;
+            color: var(--danger);
+            border: 1px solid var(--danger);
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .cancel-btn:hover { background: var(--danger); color: white; }
+
+        /* Profile Upload */
+        .profile-upload-area {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile-upload-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--light);
+            border: 3px dashed var(--border);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: var(--text-light);
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+        }
+        .profile-upload-circle:hover { border-color: var(--primary); }
+        .profile-upload-circle img { width: 100%; height: 100%; object-fit: cover; }
+        .profile-upload-circle input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .profile-upload-area p { font-size: 12px; color: var(--text-light); margin-top: 10px; }
+
+        /* Selfie Modal */
+        .selfie-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .selfie-modal-overlay.active { display: flex; }
+
+        .selfie-container {
+            width: 100%;
+            max-width: 350px;
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            animation: popIn 0.3s ease;
+        }
+        .selfie-header {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .selfie-body { padding: 20px; }
+        .camera-preview {
+            width: 100%;
+            height: 250px;
+            background: #000;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .camera-preview video { width: 100%; height: 100%; object-fit: cover; }
+        .camera-preview .scan-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            border-radius: 15px;
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+        .camera-preview .scan-line {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: var(--accent);
+            box-shadow: 0 0 10px var(--accent);
+            animation: scan 2s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes scan {
+            0% { top: 0; }
+            50% { top: calc(100% - 3px); }
+            100% { top: 0; }
+        }
+        .selfie-status {
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 10px;
+        }
+        .selfie-status .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .selfie-footer { padding: 0 20px 20px; }
+        .selfie-footer button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: all 0.2s;
+        }
+        .selfie-footer .btn-capture {
+            background: var(--success);
+            color: white;
+        }
+        .selfie-footer .btn-capture:disabled { background: #ccc; cursor: not-allowed; }
+        .selfie-footer .btn-cancel {
+            background: transparent;
+            color: var(--danger);
+            border: 1px solid var(--danger);
+        }
+        .selfie-footer .btn-retry {
+            background: var(--warning);
+            color: var(--primary);
+            display: none;
+        }
+        .selfie-footer .btn-retry.show { display: block; }
+
+        /* Terms Modal */
+        .terms-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 4000;
+            padding: 20px;
+        }
+        .terms-modal-overlay.active { display: flex; }
+
+        .terms-modal-box {
+            background: var(--white);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 450px;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            animation: popIn 0.3s ease;
+            overflow: hidden;
+        }
+
+        .terms-modal-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .terms-modal-header h3 {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .terms-modal-header h3 i { color: var(--accent); }
+        .terms-modal-header .close-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        .terms-modal-header .close-btn:hover { background: rgba(255,255,255,0.2); }
+
+        .terms-modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+        .terms-modal-body h4 {
+            color: var(--primary);
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        .terms-modal-body h4:first-child { margin-top: 0; }
+        .terms-modal-body p { margin-bottom: 10px; }
+        .terms-modal-body ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        .terms-modal-body ul li { margin-bottom: 5px; }
+
+        .terms-modal-footer {
+            padding: 15px 20px;
+            border-top: 1px solid var(--border);
+        }
+        .terms-modal-footer button {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .terms-modal-footer button:hover { background: var(--secondary); }
+    </style>
 </head>
 <body>
-  <div class="main-container">
-    <div class="header">
-      <h1>XTREME AVIATOR SHA512 HASH ULTRA PREDICTOR PRO</h1>
-      <p>Advanced AI-powered prediction with 95%+ accuracy</p>
+
+    <div class="app-container">
+
+        <!-- ================= 1. Auth Screen ================= -->
+        <div id="auth-screen">
+            <div class="auth-header">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h1>Nilantha Loan Service</h1>
+                <p>ඔබගේ විශ්වාසය - අපගේ සහය - හෙට දවස</p>
+            </div>
+
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="tab-login" onclick="switchAuthTab('login')">පිවිසෙන්න (Login)</div>
+                <div class="auth-tab" id="tab-register" onclick="switchAuthTab('register')">ලියාපදිංචි වන්න (Register)</div>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form active" onsubmit="handleLogin(event)">
+                <div class="error-msg" id="login-error"></div>
+                <div class="input-group">
+                    <label>ඊමේල් ලිපිනය (Email)</label>
+                    <input type="email" id="login-email" placeholder="උදා: kamal@gmail.com" required>
+                </div>
+                <div class="input-group">
+                    <label>මුරපදය (Password)</label>
+                    <input type="password" id="login-password" placeholder="ඔබගේ මුරපදය" required>
+                </div>
+                <button type="submit" class="btn-primary">
+                    පිවිසෙන්න <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="register-form" class="auth-form" onsubmit="handleRegister(event)">
+                <div class="error-msg" id="register-error"></div>
+                <div class="success-msg" id="register-success"></div>
+                
+                <div class="profile-upload-area">
+                    <div class="profile-upload-circle" id="onboarding-profile-preview">
+                        <i class="fas fa-camera"></i>
+                        <input type="file" id="onboarding-profile-input" accept="image/*" onchange="previewProfileImage(event, 'onboarding-profile-preview')">
+                    </div>
+                    <p>ඡායාරූපයක් එක් කරන්න (අවශ්‍ය නැත)</p>
+                </div>
+
+                <div class="input-group">
+                    <label>පළමු නාමය (First Name)</label>
+                    <input type="text" id="reg-firstName" placeholder="උදා: කමල්" required>
+                </div>
+                <div class="input-group">
+                    <label>දෙවන නාමය (Last Name)</label>
+                    <input type="text" id="reg-lastName" placeholder="උදා: පෙරේරා" required>
+                </div>
+                <div class="input-group">
+                    <label>ඊමේල් ලිපිනය (Email)</label>
+                    <input type="email" id="reg-email" placeholder="උදා: kamal@gmail.com" required>
+                </div>
+                <div class="input-group">
+                    <label>ජංගම දුරකථන අංකය (Mobile)</label>
+                    <input type="tel" id="reg-mobile" placeholder="උදා: 0771234567" pattern="[0-9]{10}" required>
+                </div>
+                <div class="input-group">
+                    <label>මුරපදය (Password)</label>
+                    <input type="password" id="reg-password" placeholder="අවම අකුරු 6ක්" minlength="6" required>
+                </div>
+                <div class="input-group">
+                    <label>මුරපදය තහවුරු කරන්න (Confirm Password)</label>
+                    <input type="password" id="reg-confirmPassword" placeholder="නැවත මුරපදය ඇතුළත් කරන්න" minlength="6" required>
+                </div>
+                <button type="submit" class="btn-primary">
+                    ලියාපදිංචි වන්න <i class="fas fa-user-plus"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- ================= 2. Main App ================= -->
+        <div id="main-app">
+            
+            <header class="app-header">
+                <div class="logo-area">
+                    <div class="logo-icon"><i class="fas fa-coins"></i></div>
+                    <div class="logo-text">
+                        <h1>Nilantha <span>Loan Service</span></h1>
+                    </div>
+                </div>
+                <div class="header-icons">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-bars"></i>
+                </div>
+            </header>
+
+            <!-- ===== Home Page ===== -->
+            <div id="page-home" class="page active">
+                
+                <section class="hero">
+                    <div class="hero-overlay"></div>
+                    
+                    <div class="hero-content">
+                        <p>Hi, I'm</p>
+                        <h2>Nilantha</h2>
+                        <p class="subtitle">Trusted Loan Provider</p>
+                        <div class="interest-badge">10% Interest Rate</div>
+                        <p class="quote">“ඔබගේ අවංකතාවයට අපගේ සහය”</p>
+                    </div>
+
+                    <div class="hero-image-container">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=300&auto=format&fit=crop" alt="Nilantha" class="hero-img-person">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2489/2489756.png" alt="Money Bag" class="hero-img-money">
+                    </div>
+                </section>
+
+                <div class="welcome-card">
+                    <div class="welcome-text">
+                        <h2>ආයුබෝවන්, <span id="display-name">පරිශීලක</span>!</h2>
+                        <p>ඔබගේ ණය සේවාවන් සාර්ථකව කළමනාකරණය කරන්න.</p>
+                    </div>
+                    <div class="profile-img-circle" id="header-profile-img"></div>
+                </div>
+
+                <div id="loan-status-container"></div>
+
+                <div class="contact-section">
+                    <h4><i class="fas fa-headset"></i> උදව් අවශ්‍යද?</h4>
+                    <p>යම්කිසි ප්‍රමාදයක් හෝ ගැටලුවක් වූයේ නම් කරුණාකර අපව අමතන්න.</p>
+                    <a href="tel:0779477010" class="contact-number">
+                        <i class="fas fa-phone-alt"></i> 077 947 7010
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- ===== My Loans Page ===== -->
+            <div id="page-loans" class="page">
+                <div class="form-title" style="margin-bottom: 20px;">මගේ සියලුම ණය</div>
+                <div id="all-loans-container"></div>
+            </div>
+
+            <!-- ===== Apply Loan Page ===== -->
+            <div id="page-apply" class="page">
+                <div class="form-card">
+                    <div class="form-title">නව ණයක් අයදුම් කරන්න</div>
+                    
+                    <div id="apply-warning" class="warning-box" style="display: none;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <strong>විශේෂ දැනුම්දීම:</strong> ඔබ දැනටමත් ණයක් ලබාගෙන ඇත. නව ණයක් ලබා ගැනීමට නම්, පළමුව දැනට ඇති ණය ගෙවා අවසන් කළ යුතුය.
+                        </div>
+                    </div>
+
+                    <form id="loan-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <label>ණය මුදල තෝරන්න (රුපියල් වලින්)</label>
+                            <select id="loanAmount" class="form-control" required onchange="calculateLoan()">
+                                <option value="">-- මුදල තෝරන්න --</option>
+                                <option value="5000">රු. 5,000</option>
+                                <option value="10000">රු. 10,000</option>
+                                <option value="25000">රු. 25,000</option>
+                                <option value="50000">රු. 50,000</option>
+                                <option value="100000">රු. 100,000</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>පොලී අනුපාතය (මසකට)</label>
+                            <input type="text" id="interestRate" class="form-control" value="10%" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label>ගෙවන කාලසීමාව (මාස ගණන)</label>
+                            <select id="loanDuration" class="form-control" required onchange="calculateLoan()">
+                                <option value="">-- කාලය තෝරන්න --</option>
+                                <option value="1">මාස 1</option>
+                                <option value="2">මාස 2</option>
+                                <option value="3">මාස 3</option>
+                                <option value="6">මාස 6</option>
+                                <option value="12">මාස 12</option>
+                            </select>
+                        </div>
+
+                        <div id="loan-summary" class="summary-box" style="display: none;">
+                            <div class="summary-row">
+                                <span>මූලික ණය මුදල:</span>
+                                <span id="sum-principal">රු. 0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>මුළු පොලිය:</span>
+                                <span id="sum-interest">රු. 0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>ඊළඟට ගෙවිය යුතු දිනය:</span>
+                                <span id="sum-date">-</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>මුළු ගෙවිය යුතු මුදල:</span>
+                                <span id="sum-total">රු. 0</span>
+                            </div>
+                        </div>
+
+                        <div class="terms-box">
+                            <input type="checkbox" id="agreeTerms">
+                            <label for="agreeTerms">
+                                මම <span class="terms-link" onclick="openTermsModal()">නියමයන් සහ කොන්දේසි</span> කියවා තේරුම් ගත්තෙමි. මෙම ණය මුදල නියමිත කාලසීමාව තුළ පොලී සමඟ ගෙවීමට එකඟ වෙමි.
+                            </label>
+                        </div>
+
+                        <button type="button" class="btn-primary" id="submit-btn" style="display: none;" onclick="submitLoanApplication()">
+                            අනුමත කිරීමට යවන්න <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ===== Profile Page ===== -->
+            <div id="page-profile" class="page">
+                <div class="loan-card">
+                    <div class="loan-card-header">
+                        <h3><i class="fas fa-user-circle"></i> මගේ පැතිකඩ</h3>
+                    </div>
+                    
+                    <div class="profile-upload-area">
+                        <div class="profile-upload-circle" id="profile-page-preview">
+                            <i class="fas fa-camera"></i>
+                            <input type="file" id="profile-page-input" accept="image/*" onchange="previewProfileImage(event, 'profile-page-preview')">
+                        </div>
+                        <p>ඡායාරූපය වෙනස් කරන්න</p>
+                    </div>
+
+                    <div style="font-size: 14px; line-height: 2;">
+                        <p><strong>නම:</strong> <span id="profile-name">-</span></p>
+                        <p><strong>ඊමේල්:</strong> <span id="profile-email">-</span></p>
+                        <p><strong>දුරකථන:</strong> <span id="profile-mobile">-</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Settings Page ===== -->
+            <div id="page-settings" class="page">
+                <div class="loan-card">
+                    <div class="loan-card-header">
+                        <h3><i class="fas fa-cog"></i> සැකසුම් සහ සහාය</h3>
+                    </div>
+                    <div style="font-size: 14px; line-height: 2;">
+                        <p><strong>ආයතනය:</strong> Nilantha Loan Service</p>
+                        <p><strong>දුරකථන:</strong> <a href="tel:0779477010" style="color: var(--primary); font-weight: bold; text-decoration: none;">077 947 7010</a></p>
+                        <p><strong>විවෘත වේලාවන්:</strong> සඳුදා - සෙනසුරාදා (පෙ.ව 8 - ප.ව 6)</p>
+                    </div>
+                    <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid var(--border);">
+                        <button onclick="resetApp()" class="btn-primary btn-danger">
+                            <i class="fas fa-sign-out-alt"></i> ගිණුමෙන් ඉවත් වන්න
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <nav class="bottom-nav">
+                <div class="nav-item active" onclick="switchTab('home', this)">
+                    <i class="fas fa-home"></i><span>මුල් පිටුව</span>
+                </div>
+                <div class="nav-item" onclick="switchTab('loans', this)">
+                    <i class="fas fa-file-alt"></i><span>මගේ ණය</span>
+                </div>
+                <div class="nav-item nav-fab" onclick="switchTab('apply', this)">
+                    <div class="fab-button"><i class="fas fa-plus"></i></div>
+                    <span>ණය ගන්න</span>
+                </div>
+                <div class="nav-item" onclick="switchTab('profile', this)">
+                    <i class="fas fa-user"></i><span>පැතිකඩ</span>
+                </div>
+                <div class="nav-item" onclick="switchTab('settings', this)">
+                    <i class="fas fa-cog"></i><span>සැකසුම්</span>
+                </div>
+            </nav>
+
+        </div>
+
+        <!-- ================= 3. Success Modal ================= -->
+        <div id="success-modal" class="modal-overlay">
+            <div class="modal-box">
+                <i id="modal-icon" class="fas fa-check-circle modal-icon"></i>
+                <h3 id="modal-title">සාර්ථකයි!</h3>
+                <p id="modal-message">ඔබගේ ණය අයදුම්පත අනුමත කිරීමට යවා ඇත.</p>
+                <button class="btn-primary" onclick="closeModal()">හරි</button>
+            </div>
+        </div>
+
+        <!-- ================= 4. Confirmation Modal ================= -->
+        <div id="confirm-modal" class="modal-overlay">
+            <div class="modal-box">
+                <i class="fas fa-question-circle modal-icon warning"></i>
+                <h3>ඉවත් කිරීම තහවුරු කරන්න</h3>
+                <p>ඔබට මෙම ණය අයදුම්පත ඉවත් කිරීමට අවශ්‍යද?</p>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn-primary" onclick="confirmCancel()" style="background: var(--danger);">ඔව්, ඉවත් කරන්න</button>
+                    <button class="btn-primary" onclick="closeConfirmModal()" style="background: var(--text-light);">නැත</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= 5. Logout Modal ================= -->
+        <div id="logout-modal" class="modal-overlay">
+            <div class="modal-box">
+                <i class="fas fa-sign-out-alt modal-icon warning"></i>
+                <h3>ගිණුමෙන් ඉවත් වීම</h3>
+                <p>ඔබට මෙම ගිණුමෙන් ඉවත් වීමට අවශ්‍යද? නැවත පිවිසීමට සිදුවේ.</p>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn-primary" onclick="confirmLogout()" style="background: var(--danger);">ඔව්, ඉවත් වන්න</button>
+                    <button class="btn-primary" onclick="closeLogoutModal()" style="background: var(--text-light);">නැත</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= 6. Selfie Verification Modal ================= -->
+        <div id="selfie-modal" class="selfie-modal-overlay">
+            <div class="selfie-container">
+                <div class="selfie-header">
+                    <i class="fas fa-camera"></i> මුහුණු සත්‍යාපනය
+                </div>
+                <div class="selfie-body">
+                    <div class="camera-preview">
+                        <video id="selfie-video" autoplay playsinline muted></video>
+                        <div class="scan-overlay"></div>
+                        <div class="scan-line"></div>
+                    </div>
+                    <div class="selfie-status" id="selfie-status">
+                        <span class="spinner"></span> කැමරාව සූදානම් වෙමින්...
+                    </div>
+                </div>
+                <div class="selfie-footer">
+                    <button class="btn-capture" id="btn-capture" onclick="captureSelfie()" disabled>
+                        <i class="fas fa-camera"></i> ඡායාරූපය ගන්න
+                    </button>
+                    <button class="btn-retry" id="btn-retry" onclick="retryCamera()">
+                        <i class="fas fa-redo"></i> නැවත උත්සාහ කරන්න
+                    </button>
+                    <button class="btn-cancel" onclick="closeSelfieModal(true)">අවලංගු කරන්න</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= 7. Terms & Conditions Modal ================= -->
+        <div id="terms-modal" class="terms-modal-overlay">
+            <div class="terms-modal-box">
+                <div class="terms-modal-header">
+                    <h3><i class="fas fa-file-contract"></i> නියමයන් සහ කොන්දේසි</h3>
+                    <button class="close-btn" onclick="closeTermsModal()">&times;</button>
+                </div>
+                <div class="terms-modal-body">
+                    <h4>1. ණය ලබා දීමේ කොන්දේසි</h4>
+                    <p>මෙම ණය මුදල ලබා දීමේදී පහත සඳහන් කොන්දේසි වලට එකඟ විය යුතුය:</p>
+                    <ul>
+                        <li>ණය ලබා ගන්නා පුද්ගලයා වයස අවුරුදු 18ට වැඩි විය යුතුය.</li>
+                        <li>ණය මුදල නියමිත කාලසීමාව තුළ ගෙවා අවසන් කළ යුතුය.</li>
+                        <li>මාසික පොලී අනුපාතය 10% කි (මසකට රු. 100කට රු. 10ක්).</li>
+                        <li>පොලී මුදල ණය මුදලට එකතු කර මුළු ගෙවිය යුතු මුදල ගණනය කෙරේ.</li>
+                    </ul>
+
+                    <h4>2. ගෙවීම් ක්‍රමය</h4>
+                    <ul>
+                        <li>ණය මුදල නියමිත දිනට පෙර හෝ එදින ගෙවා අවසන් කළ යුතුය.</li>
+                        <li>ගෙවීම් ප්‍රමාද වුවහොත්, අමතර ගාස්තු අය කළ හැක.</li>
+                        <li>සියලුම ගෙවීම් අපගේ නිලධාරීන් හරහා සිදු කළ යුතුය.</li>
+                    </ul>
+
+                    <h4>3. අනුමත කිරීමේ ක්‍රියාවලිය</h4>
+                    <ul>
+                        <li>අයදුම්පත ඉදිරිපත් කිරීමෙන් පසු, අපගේ නිලධාරීන් විසින් ඔබගේ තොරතුරු පරීක්ෂා කරනු ඇත.</li>
+                        <li>අනුමත කිරීමට පෙර සෙල්ෆි සත්‍යාපනයක් සිදු කරනු ලැබේ.</li>
+                        <li>අනුමත කිරීමෙන් පසු, ණය මුදල ඔබගේ ගිණුමට බැර කරනු ලැබේ.</li>
+                    </ul>
+
+                    <h4>4. වගකීම් සහ බැඳීම්</h4>
+                    <ul>
+                        <li>ණය ලබා ගන්නා පුද්ගලයා සියලුම තොරතුරු සත්‍ය හා නිවැරදි බවට තහවුරු කළ යුතුය.</li>
+                        <li>වැරදි තොරතුරු ලබා දීම නීතිමය පියවර ගැනීමට හේතු විය හැක.</li>
+                        <li>ණය මුදල ගෙවීමට අපොහොසත් වුවහොත්, නීතිමය ක්‍රියාමාර්ග ගනු ලැබේ.</li>
+                    </ul>
+
+                    <h4>5. රහස්‍යභාවය</h4>
+                    <p>ඔබගේ පුද්ගලික තොරතුරු අපගේ රහස්‍යතා ප්‍රතිපත්තියට අනුව ආරක්ෂා කරනු ලැබේ. ඔබගේ අවසරයකින් තොරව තෙවන පාර්ශවයකට තොරතුරු ලබා නොදේ.</p>
+
+                    <h4>6. වෙනස්කම්</h4>
+                    <p>Nilantha Loan Service විසින් මෙම නියමයන් සහ කොන්දේසි කලින් දැනුම්දීමකින් තොරව වෙනස් කිරීමට අයිතිය ඇත.</p>
+                </div>
+                <div class="terms-modal-footer">
+                    <button onclick="closeTermsModal()">මම කියවා තේරුම් ගත්තෙමි</button>
+                </div>
+            </div>
+        </div>
+
     </div>
-    
-    <div class="datetime">
-      <div id="current-date"></div>
-      <div id="current-time"></div>
-    </div>
-    
-    <div class="content">
-      <div class="input-group">
-        <label for="hashInput">Enter SHA512 Hash <span class="tooltip"><i class="fas fa-info-circle"></i><span class="tooltiptext">Must be 128-character hexadecimal string (0-9, a-f)</span></span></label>
-        <input type="text" id="hashInput" placeholder="Paste your hash here..." autocomplete="off" autocorrect="off" spellcheck="false">
-        <div class="input-actions">
-          <button class="paste-btn" id="pasteHashInput">
-            <i class="fas fa-paste"></i> Paste Hash
-          </button>
-          <button class="clear-btn" id="clearHashInput">
-            <i class="fas fa-broom"></i> Clear
-          </button>
-        </div>
-      </div>
-      
-      <div class="stats-container">
-        <div class="stat-card success">
-          <h4>Success Rate</h4>
-          <div class="value" id="success-rate">-</div>
-        </div>
-        <div class="stat-card warning">
-          <h4>Avg. Delay</h4>
-          <div class="value" id="avg-delay">-</div>
-        </div>
-        <div class="stat-card">
-          <h4>Total Predictions</h4>
-          <div class="value" id="total-predictions">-</div>
-        </div>
-      </div>
-      
-      <div class="odd-buttons">
-        <button class="odd-btn" onclick="predict('2')" id="odd-2">
-          <span>2x</span>
-          <span>Low Risk</span>
-          <div class="confidence-bar" id="confidence-2" style="width: 0%"></div>
-        </button>
-        <button class="odd-btn" onclick="predict('3')" id="odd-3">
-          <span>3x</span>
-          <span>Balanced</span>
-          <div class="confidence-bar" id="confidence-3" style="width: 0%"></div>
-        </button>
-        <button class="odd-btn" onclick="predict('4')" id="odd-4">
-          <span>4x</span>
-          <span>Moderate</span>
-          <div class="confidence-bar" id="confidence-4" style="width: 0%"></div>
-        </button>
-        <button class="odd-btn" onclick="predict('7')" id="odd-7">
-          <span>7x</span>
-          <span>High Risk</span>
-          <div class="confidence-bar" id="confidence-7" style="width: 0%"></div>
-        </button>
-        <button class="odd-btn" onclick="predict('10')" id="odd-10">
-          <span>10x</span>
-          <span>Very High Risk</span>
-          <div class="confidence-bar" id="confidence-10" style="width: 0%"></div>
-        </button>
-        <button class="odd-btn" onclick="predict('100')" id="odd-100">
-          <span>100x</span>
-          <span>Extreme Risk</span>
-          <div class="confidence-bar" id="confidence-100" style="width: 0%"></div>
-        </button>
-      </div>
-      
-      <div class="results" id="output">
-        <div class="result-item">
-          <span class="label">Target Multiplier:</span>
-          <span class="value" id="result-odd">-</span>
-        </div>
-        <div class="result-item">
-          <span class="label">Hash Entropy:</span>
-          <span class="value" id="result-entropy">-</span>
-        </div>
-        <div class="result-item">
-          <span class="label">Hash Score:</span>
-          <span class="value" id="result-score">-</span>
-        </div>
-        <div class="result-item">
-          <span class="label">Confidence Level:</span>
-          <span class="value" id="result-confidence">-</span>
-        </div>
-        <div class="result-item">
-          <span class="label">Estimated Delay:</span>
-          <span class="value" id="result-delay">-</span>
-        </div>
-        <div class="result-item">
-          <span class="label">Next Signal Time:</span>
-          <span class="value" id="result-time">-</span>
-        </div>
-        <button class="copy-result-btn" id="copyResultBtn" onclick="copyResultToClipboard(event)" disabled>
-          <i class="fas fa-copy"></i> Copy Signal
-        </button>
-      </div>
-      
-      <div class="countdown" id="countdown">No active signals. Create a new prediction.</div>
-      
-      <div class="history-container">
-        <div class="history-header">
-          <h3><i class="fas fa-history"></i> Prediction History</h3>
-          <button class="history-clear-btn" onclick="showClearDialog()">
-            <i class="fas fa-trash-alt"></i> Clear
-          </button>
-        </div>
-        <div class="history-list" id="historyLog"></div>
-      </div>
-    </div>
-    
-    <div class="footer">
-      XTREME AVIATOR SHA512 HASH ULTRA PREDICTOR PRO © <span id="current-year"></span> | ALL RIGHTS RESERVED
-    </div>
-  </div>
 
-  <!-- Disclaimer Badge -->
-  <div class="disclaimer-badge" id="disclaimerBadge">
-    <i class="fas fa-exclamation-triangle"></i>
-  </div>
+    <!-- ================= JavaScript ================= -->
+    <script>
+        let currentCancelId = null;
+        let userProfileImage = null;
+        let selfieStream = null;
+        let pendingLoanData = null;
+        let cameraReady = false;
 
-  <!-- Disclaimer Popup -->
-  <div class="disclaimer-popup" id="disclaimerPopup">
-    <h4>DISCLAIMER!</h4>
-    <p>This tool is for entertainment purposes only. Predictions are not guaranteed. Gambling involves risk. Only play with money you can afford to lose.</p>
-    <a href="https://damindu817.github.io/DISCLAIMER-/" target="_blank">Click icon for guide & creator contact</a>
-  </div>
-
-  <!-- Custom Dialogs -->
-  <div class="dialog-overlay" id="clearDialog">
-    <div class="dialog-box">
-      <div class="dialog-title">
-        <i class="fas fa-exclamation-triangle dialog-icon"></i>
-        <span>Confirm Clear History</span>
-      </div>
-      <div class="dialog-message">Are you sure you want to clear all prediction history? This cannot be undone.</div>
-      <div class="dialog-buttons">
-        <button class="dialog-btn dialog-btn-cancel" onclick="hideClearDialog()">Cancel</button>
-        <button class="dialog-btn dialog-btn-confirm" onclick="clearHistory()">OK</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="dialog-overlay" id="errorDialog">
-    <div class="dialog-box">
-      <div class="dialog-title">
-        <i class="fas fa-exclamation-circle dialog-icon"></i>
-        <span>Invalid Input</span>
-      </div>
-      <div class="dialog-message" id="errorMessage">Invalid SHA512 hash. Must be exactly 128 hexadecimal characters.</div>
-      <div class="dialog-buttons">
-        <button class="dialog-btn dialog-btn-confirm" onclick="hideErrorDialog()">OK</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="dialog-overlay" id="successDialog">
-    <div class="dialog-box">
-      <div class="dialog-title">
-        <i class="fas fa-check-circle dialog-icon" style="color: var(--success);"></i>
-        <span>Signal Generated</span>
-      </div>
-      <div class="dialog-message" id="successMessage">Prediction signal created successfully!</div>
-      <div class="dialog-buttons">
-        <button class="dialog-btn dialog-btn-confirm" onclick="hideSuccessDialog()" style="background: var(--success);">OK</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Premium Signal Popup -->
-  <div class="signal-container" id="signalPopup">
-    <div class="signal-card">
-      <div class="signal-header">
-        <div class="signal-title">
-          <i class="fas fa-bell"></i> PREMIUM SIGNAL
-        </div>
-        <button class="close-btn" onclick="closeSignalPopup()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      
-      <div class="signal-meta">
-        <div class="meta-item">
-          <div class="meta-label">Signal Time</div>
-          <div class="meta-value time" id="signal-time">-</div>
-        </div>
-        <div class="meta-item">
-          <div class="meta-label">Target</div>
-          <div class="meta-value odd" id="signal-odd">-</div>
-        </div>
-      </div>
-      
-      <div class="countdown-section">
-        <div class="countdown-circle">
-          <div id="countdown-timer">20</div>
-        </div>
-        <div class="countdown-label">SECONDS REMAINING</div>
-      </div>
-      
-      <div class="strategy-section">
-        <div class="strategy-title">
-          <i class="fas fa-chart-line"></i> WINNING STRATEGY
-        </div>
+        // ================= Auth Functions =================
         
-        <div class="strategy-steps" id="strategy-steps">
-          <!-- Dynamic content will be inserted here -->
-        </div>
-      </div>
-      
-      <div class="signal-footer">
-        <div class="footer-title">XTREME AVIATOR SHA512 HASH ULTRA PREDICTOR PRO</div>
-        <div class="footer-subtitle">Advanced AI-powered prediction with 95%+ accuracy</div>
-      </div>
-    </div>
-  </div>
+        function switchAuthTab(tab) {
+            document.getElementById('tab-login').classList.remove('active');
+            document.getElementById('tab-register').classList.remove('active');
+            document.getElementById('login-form').classList.remove('active');
+            document.getElementById('register-form').classList.remove('active');
+            document.getElementById('login-error').classList.remove('show');
+            document.getElementById('register-error').classList.remove('show');
+            document.getElementById('register-success').classList.remove('show');
 
-  <audio id="signalSound" src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3" preload="auto"></audio>
-  <audio id="successSound" src="https://assets.mixkit.co/sfx/preview/mixkit-achievement-bell-600.mp3" preload="auto"></audio>
-  <audio id="beepSound" src="https://assets.mixkit.co/sfx/preview/mixkit-positive-interface-beep-221.mp3" preload="auto"></audio>
-  <textarea id="copyTemplate" style="position: absolute; left: -9999px;"></textarea>
-
-  <script>
-    // Global variables
-    let activeSignals = [];
-    let currentCountdown = null;
-    let serverTimeOffset = 0;
-    let lastHash = '';
-    let selectedOdd = null;
-    let activeSignalPopup = null;
-    let signalQueue = [];
-    let currentSignalIndex = 0;
-    let signalEndInterval = null;
-    let signalCountdownInterval = null;
-    let disclaimerShown = false;
-    
-    // Initialize on load
-    window.onload = function() {
-      updateDateTime();
-      loadHistory();
-      updateStats();
-      syncServerTime(); // Runs in background
-      
-      // Auto-focus input field
-      document.getElementById("hashInput").focus();
-      
-      // Auto-predict if hash is pasted
-      document.getElementById("hashInput").addEventListener('input', function(e) {
-        const hash = e.target.value.trim();
-        if (hash.length === 128 && /^[a-f0-9]+$/.test(hash)) {
-          lastHash = hash;
-          preAnalyzeHash(hash);
-          // Don't enable copy button here - wait for odd selection
-        } else {
-          document.getElementById("copyResultBtn").disabled = true;
+            if (tab === 'login') {
+                document.getElementById('tab-login').classList.add('active');
+                document.getElementById('login-form').classList.add('active');
+                const lastEmail = localStorage.getItem('lastLoginEmail');
+                if (lastEmail) {
+                    document.getElementById('login-email').value = lastEmail;
+                }
+            } else {
+                document.getElementById('tab-register').classList.add('active');
+                document.getElementById('register-form').classList.add('active');
+            }
         }
-      });
-      
-      // Initialize signal popup events
-      document.getElementById("signalPopup").addEventListener('click', function(e) {
-        if (e.target === this) {
-          closeSignalPopup();
-        }
-      });
-      
-      // Initialize disclaimer badge
-      const disclaimerBadge = document.getElementById("disclaimerBadge");
-      disclaimerBadge.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.open('https://damindu817.github.io/DISCLAIMER-/', '_blank');
-      });
-      
-      // Show disclaimer popup after 5 seconds if not shown before
-      if (!sessionStorage.getItem('disclaimerShown')) {
-        setTimeout(() => {
-          showDisclaimer();
-          setTimeout(hideDisclaimer, 8000);
-          sessionStorage.setItem('disclaimerShown', 'true');
-        }, 5000);
-      }
-    };
-    
-    // Show disclaimer popup
-    function showDisclaimer() {
-      const popup = document.getElementById("disclaimerPopup");
-      popup.classList.add("show");
-    }
-    
-    // Hide disclaimer popup
-    function hideDisclaimer() {
-      const popup = document.getElementById("disclaimerPopup");
-      popup.classList.remove("show");
-    }
-    
-    // Update current date and time with server sync
-    function updateDateTime() {
-      const now = new Date(Date.now() + serverTimeOffset);
-      document.getElementById("current-date").textContent = now.toLocaleDateString('en-US', { 
-        weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' 
-      });
-      document.getElementById("current-time").textContent = now.toLocaleTimeString();
-      document.getElementById("current-year").textContent = now.getFullYear();
-    }
-    
-    setInterval(updateDateTime, 1000);
-    
-    // Sync with server time for maximum accuracy (runs in background)
-    async function syncServerTime() {
-      try {
-        const start = Date.now();
-        const response = await fetch('https://worldtimeapi.org/api/ip');
-        const data = await response.json();
-        const serverTime = new Date(data.utc_datetime).getTime();
-        const end = Date.now();
-        const rtt = end - start;
-        
-        // Calculate offset accounting for network latency
-        serverTimeOffset = serverTime - end + (rtt / 2);
-        
-        console.log(`Time synced successfully (${rtt}ms latency)`);
-        
-        // Recheck any active signals with corrected time
-        checkNextSignal();
-      } catch (e) {
-        console.error("Time sync failed, using local time:", e);
-      }
-    }
-    
-    // ====== UPDATED CORE ALGORITHMS ====== //
-    
-    // 1. Corrected entropy calculation (unchanged)
-    function calcEntropy(hash) {
-      const freq = {};
-      for (let c of hash) freq[c] = (freq[c] || 0) + 1;
-      return Object.values(freq).reduce((acc, f) => {
-        const p = f / hash.length;
-        return acc - p * Math.log2(p);
-      }, 0);
-    }
-    
-    // 2. UPDATED hash scoring with improved index positions
-    function scoreFromHash(hash) {
-      const indexes = [5, 15, 25, 35, 50, 75, 100, 120];
-      return indexes.reduce((sum, i) => sum + parseInt(hash[i], 16), 0);
-    }
-    
-    // 3. UPDATED confidence calculation with improved logic for 3× odds
-    function calculateConfidence(entropy, score, oddTarget, hash) {
-      let confidence = 50;
-      
-      // Improved entropy scoring
-      if (entropy > 4.2) confidence += 10;
-      if (entropy > 4.5) confidence += 15;
-      
-      // Improved pattern recognition
-      if (score % 7 === 0) confidence += 8;
-      if (score % 5 === 0) confidence += 5;
-      if (/(\w)\1{2,}/.test(hash)) confidence += 15;
-      if (/(\w{2,4})\1{1,}/.test(hash)) confidence += 10;
-      
-      // Tail pattern detection
-      const tail = hash.slice(-4);
-      if (/^(aaaa|ffff|0000|1111)$/.test(tail)) confidence += 20;
-      
-      // Odd-specific adjustments
-      if (oddTarget === '2') confidence += 5;
-      if (oddTarget === '3') confidence += 5;
-      if (oddTarget === '7') confidence += 5;
-      if (oddTarget === '10') confidence += 10;
-      if (oddTarget === '100') confidence += 15;
-      
-      // New logic for 4×, 7×, and 10× multipliers
-      if (oddTarget === '4') {
-        if (entropy > 3.91 && entropy < 3.97) confidence += 10;
-        if (score >= 45 && score <= 80) confidence += 8;
-      }
-      
-      if (oddTarget === '7') {
-        if (entropy > 4.1 && entropy < 4.4) confidence += 12;
-        if (score >= 55 && score <= 90) confidence += 6;
-      }
-      
-      if (oddTarget === '10') {
-        if (entropy > 4.25 && entropy < 4.5) confidence += 15;
-        if (score >= 60 && score <= 100) confidence += 10;
-      }
-      
-      return Math.min(98, Math.max(5, Math.round(confidence)));
-    }
-    
-    // 4. UPDATED delay calculation with improved timing for 3× odds
-    function calculateDelay(score, entropy, oddTarget, hash) {
-      let base = parseInt(oddTarget) * 45;
-      
-      if (entropy > 4.3) base += 20;
-      if (score % 7 === 0) base += 30;
-      if (score % 5 === 0) base += 15;
-      if (/(\w)\1{2,}/.test(hash)) base += 20;
-      if (/(\w{2,4})\1{1,}/.test(hash)) base += 15;
-      
-      // Odd-specific adjustments
-      if (oddTarget === '10') base += 60;
-      if (oddTarget === '100') base += 600;
-      
-      return Math.max(45, base);
-    }
-    
-    // Pre-analyze hash to show confidence levels
-    function preAnalyzeHash(hash) {
-      if (!hash || hash.length !== 128 || !/^[a-f0-9]+$/.test(hash)) return;
-      
-      const entropy = calcEntropy(hash);
-      const score = scoreFromHash(hash);
-      
-      // Update confidence bars for each odd
-      [2, 3, 4, 7, 10, 100].forEach(odd => {
-        const confidence = calculateConfidence(entropy, score, odd.toString(), hash);
-        document.getElementById(`confidence-${odd}`).style.width = `${confidence}%`;
-      });
-    }
-    
-    // ====== END OF UPDATED ALGORITHMS ====== //
-    
-    // Paste hash from clipboard
-    document.getElementById("pasteHashInput").addEventListener('click', async function() {
-      try {
-        const text = await navigator.clipboard.readText();
-        document.getElementById("hashInput").value = text;
-        lastHash = text.trim();
-        if (lastHash.length === 128 && /^[a-f0-9]+$/.test(lastHash)) {
-          preAnalyzeHash(lastHash);
-          // Don't enable copy button here - wait for odd selection
-        } else {
-          document.getElementById("copyResultBtn").disabled = true;
-        }
-      } catch (err) {
-        showErrorDialog("Failed to read from clipboard. Please paste manually.");
-        console.error("Failed to read clipboard contents: ", err);
-      }
-    });
-    
-    // Clear hash input
-    document.getElementById("clearHashInput").addEventListener('click', function() {
-      document.getElementById("hashInput").value = '';
-      lastHash = '';
-      document.getElementById("copyResultBtn").disabled = true;
-      selectedOdd = null;
-      
-      // Reset confidence bars
-      [2, 3, 4, 7, 10, 100].forEach(odd => {
-        document.getElementById(`confidence-${odd}`).style.width = '0%';
-      });
-      
-      // Reset results display
-      document.getElementById("result-odd").textContent = "-";
-      document.getElementById("result-entropy").textContent = "-";
-      document.getElementById("result-score").textContent = "-";
-      document.getElementById("result-confidence").textContent = "-";
-      document.getElementById("result-delay").textContent = "-";
-      document.getElementById("result-time").textContent = "-";
-    });
-    
-    // Audio functions
-    function playSignalSound() {
-      const audio = document.getElementById("signalSound");
-      audio.currentTime = 0;
-      audio.play().catch(e => console.log("Audio play failed:", e));
-    }
-    
-    function playSuccessSound() {
-      const audio = document.getElementById("successSound");
-      audio.currentTime = 0;
-      audio.play().catch(e => console.log("Audio play failed:", e));
-    }
-    
-    function playBeepSound() {
-      const audio = document.getElementById("beepSound");
-      audio.currentTime = 0;
-      audio.play().catch(e => console.log("Beep sound play failed:", e));
-    }
-    
-    // Countdown and active signal tracking
-    function updateCountdown(targetTime, odd) {
-      // Clear any existing countdown
-      if (currentCountdown) {
-        clearInterval(currentCountdown);
-      }
-      
-      const signalId = Date.now();
-      activeSignals.push({ id: signalId, time: targetTime, odd });
-      
-      // Schedule popup to show 20 seconds before signal time
-      const popupTime = new Date(targetTime.getTime() - 20000);
-      const now = new Date(Date.now() + serverTimeOffset);
-      const popupDelay = popupTime - now;
-      
-      if (popupDelay > 0) {
-        setTimeout(() => {
-          // Only show popup if the signal time hasn't passed yet
-          if (new Date(Date.now() + serverTimeOffset) < targetTime) {
-            showSignalPopup(targetTime, odd, signalId);
-          }
-        }, popupDelay);
-      }
-      
-      currentCountdown = setInterval(() => {
-        const now = new Date(Date.now() + serverTimeOffset);
-        const diff = Math.floor((targetTime - now) / 1000);
-        
-        if (diff <= 0) {
-          clearInterval(currentCountdown);
-          document.getElementById("countdown").textContent = `Signal for ${odd}x reached! Place your bet now!`;
-          document.getElementById("countdown").className = odd === "100" ? "countdown extreme" : "countdown";
-          playSignalSound();
-          playBeepSound(); // Play beep sound when signal is reached
-          highlightActiveSignal(signalId);
-          removeSignal(signalId);
-          
-          // Check for next signal after this one completes
-          setTimeout(checkNextSignal, 1000);
-        } else {
-          const min = Math.floor(diff / 60);
-          const sec = diff % 60;
-          document.getElementById("countdown").textContent = `Next ${odd}x signal in: ${min}m ${sec}s`;
-          
-          // Change color based on urgency
-          if (odd === "100") {
-            document.getElementById("countdown").className = "countdown extreme";
-          } else if (diff < 30) {
-            document.getElementById("countdown").className = "countdown danger";
-          } else if (diff < 60) {
-            document.getElementById("countdown").className = "countdown warning";
-          } else {
-            document.getElementById("countdown").className = "countdown";
-          }
-        }
-      }, 1000);
-    }
-    
-    // Enhanced function to show signal popup
-    function showSignalPopup(targetTime, odd, signalId) {
-      const popup = document.getElementById("signalPopup");
-      const timeStr = targetTime.toLocaleTimeString();
-      
-      // Update popup content
-      document.getElementById("signal-time").textContent = timeStr;
-      document.getElementById("signal-odd").textContent = `${odd}x`;
-      
-      // Generate strategy steps
-      const strategyContent = `
-        <div class="strategy-step">
-          <div class="step-number">1</div>
-          <div>Enter at <span class="highlight">${timeStr}</span> in the next available round</div>
-        </div>
-        <div class="strategy-step">
-          <div class="step-number">2</div>
-          <div>Maintain bet until reaching <span class="highlight">${odd}x</span> target</div>
-        </div>
-        <div class="strategy-step">
-          <div class="step-number">3</div>
-          <div>Limit to maximum <span class="highlight">3 rounds</span> only</div>
-        </div>
-        <div class="strategy-step">
-          <div class="step-number">4</div>
-          <div>Use <span class="highlight">Auto Cashout</span> for consistent results</div>
-        </div>
-        <div class="strategy-step">
-          <div class="step-number">5</div>
-          <div>Cash out immediately after passing <span class="highlight">${odd}x</span></div>
-        </div>
-      `;
-      
-      document.getElementById("strategy-steps").innerHTML = strategyContent;
-      
-      // Start 20-second countdown
-      let countdown = 20;
-      document.getElementById("countdown-timer").textContent = countdown;
-      
-      if (signalCountdownInterval) {
-        clearInterval(signalCountdownInterval);
-      }
-      
-      signalCountdownInterval = setInterval(() => {
-        countdown--;
-        document.getElementById("countdown-timer").textContent = countdown;
-        
-        if (countdown <= 0) {
-          clearInterval(signalCountdownInterval);
-          closeSignalPopup();
-        }
-      }, 1000);
-      
-      // Show popup
-      popup.classList.add("active");
-      
-      // Auto-close when signal time arrives
-      const now = new Date(Date.now() + serverTimeOffset);
-      const timeUntilSignal = targetTime - now;
-      
-      if (timeUntilSignal > 0) {
-        setTimeout(() => {
-          closeSignalPopup();
-        }, timeUntilSignal);
-      }
-    }
 
-    // Enhanced function to close signal popup
-    function closeSignalPopup() {
-      const popup = document.getElementById("signalPopup");
-      popup.classList.remove("active");
-      activeSignalPopup = null;
-      
-      // Clear countdown interval
-      if (signalCountdownInterval) {
-        clearInterval(signalCountdownInterval);
-        signalCountdownInterval = null;
-      }
-    }
-    
-    function checkNextSignal() {
-      const now = new Date(Date.now() + serverTimeOffset);
-      const history = JSON.parse(localStorage.getItem('aviatorHistory')) || [];
-      
-      // Find the next upcoming signal that hasn't passed yet
-      const upcomingSignals = history.filter(item => {
-        const signalTime = new Date(parseInt(item.timestamp));
-        return signalTime > now;
-      }).sort((a, b) => a.timestamp - b.timestamp);
-      
-      if (upcomingSignals.length > 0) {
-        const nextSignal = upcomingSignals[0];
-        const signalTime = new Date(parseInt(nextSignal.timestamp));
-        updateCountdown(signalTime, nextSignal.odd);
-      } else {
-        document.getElementById("countdown").textContent = "No active signals. Create a new prediction.";
-        document.getElementById("countdown").className = "countdown warning";
-      }
-    }
-    
-    function highlightActiveSignal(id) {
-      const historyItems = document.querySelectorAll('.history-item');
-      historyItems.forEach(item => {
-        if (item.dataset.id == id) {
-          item.classList.add('active', 'active-signal');
-          setTimeout(() => {
-            item.classList.remove('active-signal');
-          }, 10000);
-        }
-      });
-    }
-    
-    function removeSignal(id) {
-      activeSignals = activeSignals.filter(signal => signal.id !== id);
-    }
-    
-    // Generate WhatsApp message template
-    function generateWhatsAppTemplate(odd, timeStr, confidence) {
-      let riskText = "";
-      if (odd === "100") {
-        riskText = " (EXTREME RISK - RARE OPPORTUNITY)";
-        return `Xtreme Aviator Predictor - 1xBet\n\nTime: ${timeStr}\nOdd: ${odd}×${riskText}\nConfidence: ${confidence}%\n\nThis signal is generated using the XTREME AVIATOR SHA512 HASH ULTRA PREDICTOR PRO tool with AI-powered accuracy.`;
-      } else if (odd === "10") {
-        riskText = " (Very High Risk)";
-      } else if (odd === "7") {
-        riskText = " (High Risk)";
-      }
-      
-      return `Xtreme Aviator Predictor - 1xBet\n\nTime: ${timeStr}\nOdd: ${odd}×${riskText}\n\nThis signal is generated using the XTREME AVIATOR SHA512 HASH ULTRA PREDICTOR PRO tool with AI-powered accuracy.`;
-    }
-    
-    // Generate result copy template
-    function generateResultCopyTemplate() {
-      const odd = document.getElementById("result-odd").textContent;
-      const time = document.getElementById("result-time").textContent;
-      const confidence = document.getElementById("result-confidence").textContent;
-      
-      if (odd === "100x") {
-        return `Xtreme Aviator Predictor - 1xBet\n\nTime: ${time}\nOdd: ${odd} (EXTREME RISK - RARE OPPORTUNITY)\nConfidence: ${confidence}\n\nThis signal is generated using the XTREME AVIATOR SHA512 HASH ULTRA PREDICTOR PRO tool with AI-powered accuracy.`;
-      } else if (odd === "10x") {
-        return `Xtreme Aviator Predictor - 1xBet\n\nTime: ${time}\nOdd: ${odd} (Very High Risk)\n\nThis signal is generated using the XTREME AVIATOR SHA512 HASH ULTRA PREDICTOR PRO tool with AI-powered accuracy.`;
-      } else if (odd === "7x") {
-        return `Xtreme Aviator Predictor - 1xBet\n\nTime: ${time}\nOdd: ${odd} (High Risk)\n\nThis signal is generated using the XTREME AVIATOR SHA512 HASH ULTRA PREDICTOR PRO tool with AI-powered accuracy.`;
-      } else {
-        return `Xtreme Aviator Predictor - 1xBet\n\nTime: ${time}\nOdd: ${odd}\n\nThis signal is generated using the XTREME AVIATOR SHA512 HASH ULTRA PREDICTOR PRO tool with AI-powered accuracy.`;
-      }
-    }
-    
-    // Copy to clipboard function
-    function copyToClipboard(text) {
-      const textarea = document.getElementById("copyTemplate");
-      textarea.value = text;
-      textarea.select();
-      document.execCommand("copy");
-      
-      // Show feedback
-      const originalText = document.activeElement.innerHTML;
-      document.activeElement.innerHTML = '<i class="fas fa-check"></i> Copied!';
-      setTimeout(() => {
-        document.activeElement.innerHTML = originalText;
-      }, 2000);
-    }
-    
-    function copyResultToClipboard(e) {
-      e.preventDefault();
-      const hash = document.getElementById("hashInput").value.trim();
-      if (!hash || hash.length !== 128 || !/^[a-f0-9]+$/.test(hash)) {
-        showErrorDialog("Please enter a valid SHA512 hash first.");
-        return;
-      }
-      
-      if (!selectedOdd) {
-        showErrorDialog("Please select an odd first.");
-        return;
-      }
-      
-      const template = generateResultCopyTemplate();
-      copyToClipboard(template);
-    }
-    
-    function copySignalToClipboard(e, odd, timeStr, confidence) {
-      e.preventDefault();
-      e.stopPropagation();
-      const template = generateWhatsAppTemplate(odd, timeStr, confidence);
-      copyToClipboard(template);
-    }
-    
-    // History functions
-    function logHistory(odd, timeStr, entropy, score, delay, confidence) {
-      const log = document.getElementById("historyLog");
-      const entry = document.createElement("div");
-      entry.className = `history-item history-multiplier-${odd}`;
-      if (odd === "100") entry.classList.add('extreme');
-      entry.dataset.id = Date.now();
-      entry.dataset.time = new Date(Date.now() + serverTimeOffset + delay * 1000).getTime();
-      
-      entry.innerHTML = `
-        <div class="history-time">
-          <i class="far fa-clock"></i> ${new Date(Date.now() + serverTimeOffset).toLocaleTimeString()}
-        </div>
-        <div class="history-multiplier">
-          <span>${odd}x</span>
-        </div>
-        <div class="history-details">
-          <span><i class="fas fa-bolt"></i> ${timeStr}</span>
-          <span><i class="fas fa-chart-line"></i> Score: ${score}</span>
-          <span><i class="fas fa-random"></i> Entropy: ${entropy.toFixed(2)}</span>
-          <span><i class="fas fa-shield-alt"></i> Confidence: ${confidence}%</span>
-        </div>
-        <button class="copy-btn" onclick="copySignalToClipboard(event, '${odd}', '${timeStr}', '${confidence}')">
-          <i class="fas fa-copy"></i> Copy
-        </button>
-      `;
-      
-      log.insertBefore(entry, log.firstChild);
-      
-      // Save to localStorage
-      const history = JSON.parse(localStorage.getItem('aviatorHistory')) || [];
-      history.unshift({
-        id: entry.dataset.id,
-        time: new Date(Date.now() + serverTimeOffset).toLocaleTimeString(),
-        odd,
-        signalTime: timeStr,
-        score,
-        entropy: entropy.toFixed(2),
-        delay,
-        confidence,
-        timestamp: entry.dataset.time,
-        wasSuccessful: null,
-        actualMultiplier: null
-      });
-      localStorage.setItem('aviatorHistory', JSON.stringify(history));
-      
-      // Update stats
-      updateStats();
-    }
-    
-    function updateStats() {
-      const history = JSON.parse(localStorage.getItem('aviatorHistory')) || [];
-      const successful = history.filter(x => x.wasSuccessful === true).length;
-      const failed = history.filter(x => x.wasSuccessful === false).length;
-      const total = successful + failed;
-      
-      // Success rate
-      if (total > 0) {
-        const successRate = Math.round((successful / total) * 100);
-        document.getElementById("success-rate").textContent = `${successRate}%`;
-      } else {
-        document.getElementById("success-rate").textContent = "-";
-      }
-      
-      // Average delay
-      if (history.length > 0) {
-        const avgDelay = Math.round(history.reduce((sum, item) => sum + item.delay, 0) / history.length);
-        document.getElementById("avg-delay").textContent = `${avgDelay}s`;
-      } else {
-        document.getElementById("avg-delay").textContent = "-";
-      }
-      
-      // Total predictions
-      document.getElementById("total-predictions").textContent = history.length;
-    }
-    
-    // Dialog functions
-    function showClearDialog() {
-      document.getElementById("clearDialog").classList.add("active");
-    }
-    
-    function hideClearDialog() {
-      document.getElementById("clearDialog").classList.remove("active");
-    }
-    
-    function showErrorDialog(message) {
-      document.getElementById("errorMessage").textContent = message;
-      document.getElementById("errorDialog").classList.add("active");
-    }
-    
-    function hideErrorDialog() {
-      document.getElementById("errorDialog").classList.remove("active");
-    }
-    
-    function showSuccessDialog(message) {
-      document.getElementById("successMessage").textContent = message;
-      document.getElementById("successDialog").classList.add("active");
-      playSuccessSound();
-    }
-    
-    function hideSuccessDialog() {
-      document.getElementById("successDialog").classList.remove("active");
-    }
-    
-    function clearHistory() {
-      document.getElementById("historyLog").innerHTML = '';
-      localStorage.removeItem('aviatorHistory');
-      document.getElementById("countdown").textContent = "No active signals. Create a new prediction.";
-      document.getElementById("countdown").className = "countdown warning";
-      if (currentCountdown) {
-        clearInterval(currentCountdown);
-        currentCountdown = null;
-      }
-      
-      // Clear the results display
-      document.getElementById("result-odd").textContent = "-";
-      document.getElementById("result-entropy").textContent = "-";
-      document.getElementById("result-score").textContent = "-";
-      document.getElementById("result-confidence").textContent = "-";
-      document.getElementById("result-delay").textContent = "-";
-      document.getElementById("result-time").textContent = "-";
-      
-      // Reset stats
-      updateStats();
-      
-      hideClearDialog();
-    }
-    
-    function loadHistory() {
-      const history = JSON.parse(localStorage.getItem('aviatorHistory')) || [];
-      const log = document.getElementById("historyLog");
-      log.innerHTML = '';
-      
-      // Sort by timestamp (newest first)
-      history.sort((a, b) => b.timestamp - a.timestamp);
-      
-      history.forEach(item => {
-        const entry = document.createElement("div");
-        entry.className = `history-item history-multiplier-${item.odd}`;
-        if (item.odd === "100") entry.classList.add('extreme');
-        if (item.wasSuccessful === true) entry.classList.add('success');
-        if (item.wasSuccessful === false) entry.classList.add('failure');
-        entry.dataset.id = item.id;
-        entry.dataset.time = item.timestamp;
-        
-        // Check if this signal is currently active
-        const now = new Date(Date.now() + serverTimeOffset);
-        const signalTime = new Date(parseInt(item.timestamp));
-        if (now >= signalTime && now <= new Date(signalTime.getTime() + 10000)) {
-          entry.classList.add('active');
-        }
-        
-        // Determine the color class for the actual multiplier
-        let multiplierClass = '';
-        if (item.actualMultiplier) {
-          if (item.actualMultiplier >= 100) {
-            multiplierClass = 'actual-multiplier-100';
-          } else if (item.actualMultiplier >= 10) {
-            multiplierClass = 'actual-multiplier-10';
-          } else if (item.actualMultiplier >= 7) {
-            multiplierClass = 'actual-multiplier-7';
-          } else if (item.actualMultiplier >= 4) {
-            multiplierClass = 'actual-multiplier-4';
-          } else if (item.actualMultiplier >= 3) {
-            multiplierClass = 'actual-multiplier-3';
-          } else {
-            multiplierClass = 'actual-multiplier-2';
-          }
-        }
-        
-        entry.innerHTML = `
-          <div class="history-time">
-            <i class="far fa-clock"></i> ${item.time}
-            ${item.wasSuccessful !== null ? 
-              `<span class="actual-multiplier ${multiplierClass}" style="margin-left: 8px; font-size: 0.8em;">
-                <i class="fas ${item.wasSuccessful ? 'fa-check' : 'fa-times'}"></i>
-                ${item.actualMultiplier ? `${item.actualMultiplier}x` : ''}
-              </span>` : ''}
-          </div>
-          <div class="history-multiplier">
-            <span>${item.odd}x</span>
-          </div>
-          <div class="history-details">
-            <span><i class="fas fa-bolt"></i> ${item.signalTime}</span>
-            <span><i class="fas fa-chart-line"></i> Score: ${item.score}</span>
-            <span><i class="fas fa-random"></i> Entropy: ${item.entropy}</span>
-            <span><i class="fas fa-shield-alt"></i> Confidence: ${item.confidence}%</span>
-          </div>
-          <button class="copy-btn" onclick="copySignalToClipboard(event, '${item.odd}', '${item.signalTime}', '${item.confidence}')">
-            <i class="fas fa-copy"></i> Copy
-          </button>
-        `;
-        
-        log.appendChild(entry);
-      });
-      
-      // Check for active signals on load
-      checkNextSignal();
-    }
-    
-    // Main prediction function
-    function predict(oddStr) {
-      const hash = document.getElementById("hashInput").value.trim().toLowerCase();
-      const output = document.getElementById("output");
-      
-      if (!hash || hash.length !== 128 || !/^[a-f0-9]+$/.test(hash)) {
-        showErrorDialog("Invalid SHA512 hash. Must be exactly 128 hexadecimal characters (0-9, a-f).");
-        return;
-      }
-      
-      selectedOdd = oddStr;
-      const entropy = calcEntropy(hash);
-      const score = scoreFromHash(hash);
-      const confidence = calculateConfidence(entropy, score, oddStr, hash);
-      const delay = calculateDelay(score, entropy, oddStr, hash);
-      const future = new Date(Date.now() + serverTimeOffset + delay * 1000);
-      const timeStr = future.toLocaleTimeString();
-      
-      // Update results display
-      document.getElementById("result-odd").textContent = `${oddStr}x`;
-      document.getElementById("result-entropy").textContent = entropy.toFixed(3);
-      document.getElementById("result-score").textContent = score;
-      document.getElementById("result-confidence").textContent = `${confidence}%`;
-      document.getElementById("result-delay").textContent = `${delay} seconds`;
-      document.getElementById("result-time").textContent = timeStr;
-      
-      // Enable copy button only after odd is selected
-      document.getElementById("copyResultBtn").disabled = false;
-      
-      output.style.display = 'block';
-      updateCountdown(future, oddStr);
-      logHistory(oddStr, timeStr, entropy, score, delay, confidence);
-      showSuccessDialog(`Signal for ${oddStr}x generated with ${confidence}% confidence!`);
-      
-      // Scroll to results
-      output.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-    
-    // Function to record actual results (call this after a round completes)
-    function recordResult(signalId, actualMultiplier) {
-      const history = JSON.parse(localStorage.getItem('aviatorHistory')) || [];
-      const signalIndex = history.findIndex(item => item.id == signalId);
-      
-      if (signalIndex !== -1) {
-        history[signalIndex].actualMultiplier = actualMultiplier;
-        history[signalIndex].wasSuccessful = actualMultiplier >= parseInt(history[signalIndex].odd);
-        localStorage.setItem('aviatorHistory', JSON.stringify(history));
-        loadHistory(); // Refresh the display
-        updateStats();
-        
-        // Show result notification
-        showSuccessDialog(`Result recorded! Multiplier: ${actualMultiplier}x - ${
-          history[signalIndex].wasSuccessful ? 'SUCCESS!' : 'TRY AGAIN'
-        }`);
-      }
-    }
+        function handleRegister(event) {
+            event.preventDefault();
+            const errorEl = document.getElementById('register-error');
+            const successEl = document.getElementById('register-success');
+            errorEl.classList.remove('show');
+            successEl.classList.remove('show');
 
-    // Auto result tracking simulation (for demo purposes)
-    function simulateAutoTracking() {
-      setInterval(() => {
-        const history = JSON.parse(localStorage.getItem('aviatorHistory')) || [];
-        if (history.length > 0 && history[0].wasSuccessful === null) {
-          // Simulate a random result between 1x and 150x (with very low chance for 100x+)
-          let actualMultiplier;
-          if (Math.random() < 0.01) { // 1% chance for 100x+
-            actualMultiplier = (Math.random() * 50 + 100).toFixed(2);
-          } else {
-            actualMultiplier = (Math.random() * 14 + 1).toFixed(2);
-          }
-          recordResult(history[0].id, parseFloat(actualMultiplier));
+            const firstName = document.getElementById('reg-firstName').value.trim();
+            const lastName = document.getElementById('reg-lastName').value.trim();
+            const email = document.getElementById('reg-email').value.trim().toLowerCase();
+            const mobile = document.getElementById('reg-mobile').value.trim();
+            const password = document.getElementById('reg-password').value;
+            const confirmPassword = document.getElementById('reg-confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                errorEl.textContent = 'මුරපද දෙක එකිනෙකට නොගැලපේ.';
+                errorEl.classList.add('show');
+                return;
+            }
+
+            if (password.length < 6) {
+                errorEl.textContent = 'මුරපදය අවම අකුරු 6ක් විය යුතුය.';
+                errorEl.classList.add('show');
+                return;
+            }
+
+            if (mobile.length !== 10) {
+                errorEl.textContent = 'දුරකථන අංකය අංක 10ක් විය යුතුය.';
+                errorEl.classList.add('show');
+                return;
+            }
+
+            const users = JSON.parse(localStorage.getItem('loanAppUsers')) || {};
+            if (users[email]) {
+                errorEl.textContent = 'මෙම ඊමේල් ලිපිනය දැනටමත් ලියාපදිංචි කර ඇත.';
+                errorEl.classList.add('show');
+                return;
+            }
+
+            const mobileExists = Object.values(users).some(user => user.mobile === mobile);
+            if (mobileExists) {
+                errorEl.textContent = 'මෙම දුරකථන අංකය දැනටමත් ලියාපදිංචි කර ඇත.';
+                errorEl.classList.add('show');
+                return;
+            }
+
+            users[email] = {
+                firstName,
+                lastName,
+                email,
+                mobile,
+                password: btoa(password),
+                profileImage: userProfileImage
+            };
+            localStorage.setItem('loanAppUsers', JSON.stringify(users));
+
+            successEl.textContent = 'ලියාපදිංචිය සාර්ථකයි! දැන් ඔබට පිවිසිය හැක.';
+            successEl.classList.add('show');
+
+            setTimeout(() => {
+                document.getElementById('login-email').value = email;
+                switchAuthTab('login');
+            }, 1500);
         }
-      }, 10000); // Check every 10 seconds
-    }
-    
-    // Start simulation (remove in production)
-    simulateAutoTracking();
-  </script>
-<script src="enhanced-aviator-ai.js"></script>
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const errorEl = document.getElementById('login-error');
+            errorEl.classList.remove('show');
+
+            const email = document.getElementById('login-email').value.trim().toLowerCase();
+            const password = document.getElementById('login-password').value;
+
+            const users = JSON.parse(localStorage.getItem('loanAppUsers')) || {};
+            const user = users[email];
+
+            if (!user) {
+                errorEl.textContent = 'මෙම ඊමේල් ලිපිනය සමඟ ගිණුමක් නොමැත.';
+                errorEl.classList.add('show');
+                return;
+            }
+
+            if (user.password !== btoa(password)) {
+                errorEl.textContent = 'මුරපදය වැරදිය.';
+                errorEl.classList.add('show');
+                return;
+            }
+
+            localStorage.setItem('lastLoginEmail', email);
+
+            const userData = {
+                firstName: user.firstName,
+                lastName: user.lastName,
+                email: user.email,
+                mobile: user.mobile,
+                profileImage: user.profileImage || null
+            };
+            localStorage.setItem('loanAppUser', JSON.stringify(userData));
+            initApp(userData);
+        }
+
+        // ================= App Initialization =================
+        function initApp(userData) {
+            document.getElementById('auth-screen').classList.add('hidden');
+            document.getElementById('main-app').classList.add('active');
+
+            const fullName = userData.firstName + ' ' + userData.lastName;
+            document.getElementById('display-name').textContent = userData.firstName;
+            document.getElementById('profile-name').textContent = fullName;
+            document.getElementById('profile-email').textContent = userData.email;
+            document.getElementById('profile-mobile').textContent = userData.mobile;
+
+            updateProfileImages(userData);
+            renderAllLoans();
+            checkApplyWarning();
+        }
+
+        // ================= Profile Images =================
+        function updateProfileImages(userData) {
+            const headerImg = document.getElementById('header-profile-img');
+            const profilePagePreview = document.getElementById('profile-page-preview');
+            const onboardingPreview = document.getElementById('onboarding-profile-preview');
+
+            if (userData.profileImage) {
+                headerImg.innerHTML = `<img src="${userData.profileImage}" alt="Profile">`;
+                profilePagePreview.innerHTML = `<img src="${userData.profileImage}" alt="Profile"><input type="file" id="profile-page-input" accept="image/*" onchange="previewProfileImage(event, 'profile-page-preview')">`;
+                onboardingPreview.innerHTML = `<img src="${userData.profileImage}" alt="Profile"><input type="file" id="onboarding-profile-input" accept="image/*" onchange="previewProfileImage(event, 'onboarding-profile-preview')">`;
+            } else {
+                const initials = userData.firstName.charAt(0) + (userData.lastName ? userData.lastName.charAt(0) : '');
+                headerImg.innerHTML = `<span>${initials.toUpperCase()}</span>`;
+                profilePagePreview.innerHTML = `<i class="fas fa-camera"></i><input type="file" id="profile-page-input" accept="image/*" onchange="previewProfileImage(event, 'profile-page-preview')">`;
+                onboardingPreview.innerHTML = `<i class="fas fa-camera"></i><input type="file" id="onboarding-profile-input" accept="image/*" onchange="previewProfileImage(event, 'onboarding-profile-preview')">`;
+            }
+        }
+
+        function previewProfileImage(event, containerId) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const container = document.getElementById(containerId);
+                    container.innerHTML = `<img src="${e.target.result}" alt="Profile"><input type="file" id="${containerId}-input" accept="image/*" onchange="previewProfileImage(event, '${containerId}')">`;
+                    
+                    const userData = JSON.parse(localStorage.getItem('loanAppUser'));
+                    userData.profileImage = e.target.result;
+                    localStorage.setItem('loanAppUser', JSON.stringify(userData));
+
+                    const users = JSON.parse(localStorage.getItem('loanAppUsers')) || {};
+                    if (users[userData.email]) {
+                        users[userData.email].profileImage = e.target.result;
+                        localStorage.setItem('loanAppUsers', JSON.stringify(users));
+                    }
+                    
+                    updateProfileImages(userData);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // ================= Tab Switching =================
+        function switchTab(pageId, element) {
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            
+            const activePage = document.getElementById('page-' + pageId);
+            if (activePage) activePage.classList.add('active');
+
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            element.classList.add('active');
+
+            if (pageId === 'apply') {
+                checkApplyWarning();
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ================= Loan Functions =================
+        function checkApplyWarning() {
+            const loans = JSON.parse(localStorage.getItem('userLoans')) || [];
+            const activeLoans = loans.filter(l => l.status === 'Approved' || l.status === 'Active');
+            const pendingLoans = loans.filter(l => l.status === 'Pending Approval');
+
+            const warningBox = document.getElementById('apply-warning');
+            
+            if (activeLoans.length > 0 || pendingLoans.length > 0) {
+                warningBox.style.display = 'flex';
+            } else {
+                warningBox.style.display = 'none';
+            }
+        }
+
+        function calculateLoan() {
+            const amount = parseFloat(document.getElementById('loanAmount').value);
+            const duration = parseInt(document.getElementById('loanDuration').value);
+            const interestRate = 10;
+
+            if (!amount || !duration) {
+                document.getElementById('loan-summary').style.display = 'none';
+                document.getElementById('submit-btn').style.display = 'none';
+                return;
+            }
+
+            const totalInterest = amount * (interestRate / 100) * duration;
+            const totalPayable = amount + totalInterest;
+            
+            const nextDate = new Date();
+            nextDate.setMonth(nextDate.getMonth() + duration);
+            const formattedDate = nextDate.toISOString().split('T')[0];
+
+            document.getElementById('sum-principal').textContent = 'රු. ' + amount.toLocaleString('en-LK');
+            document.getElementById('sum-interest').textContent = 'රු. ' + totalInterest.toLocaleString('en-LK');
+            document.getElementById('sum-date').textContent = formattedDate;
+            document.getElementById('sum-total').textContent = 'රු. ' + totalPayable.toLocaleString('en-LK');
+
+            document.getElementById('loan-summary').style.display = 'block';
+            document.getElementById('submit-btn').style.display = 'flex';
+        }
+
+        function submitLoanApplication() {
+            const agreeTerms = document.getElementById('agreeTerms').checked;
+            if (!agreeTerms) {
+                showModal('warning', 'නියමයන්ට එකඟ වන්න', 'ණය ලබා ගැනීමට පෙර නියමයන් සහ කොන්දේසි වලට එකඟ විය යුතුය.');
+                return;
+            }
+
+            const amount = parseFloat(document.getElementById('loanAmount').value);
+            const duration = parseInt(document.getElementById('loanDuration').value);
+            
+            if (!amount || !duration) {
+                showModal('warning', 'තොරතුරු අසම්පූර්ණයි', 'කරුණාකර ණය මුදල සහ කාලසීමාව තෝරන්න.');
+                return;
+            }
+
+            const loans = JSON.parse(localStorage.getItem('userLoans')) || [];
+            const hasActiveOrPending = loans.some(l => l.status === 'Approved' || l.status === 'Active' || l.status === 'Pending Approval');
+            
+            if (hasActiveOrPending) {
+                showModal(
+                    'warning', 
+                    'විශේෂ දැනුම්දීම', 
+                    'ඔබ දැනටමත් ණයක් ලබාගෙන ඇති බැවින්, මෙම නව ණය අයදුම්පත අනුමත කිරීමට පෙර අපගේ නිලධාරීන් විසින් ඔබගේ ණය ඉතිහාසය පරීක්ෂා කරනු ඇත.'
+                );
+                return;
+            }
+
+            const interestRate = 10;
+            const totalInterest = amount * (interestRate / 100) * duration;
+            const totalPayable = amount + totalInterest;
+            
+            const nextDate = new Date();
+            nextDate.setMonth(nextDate.getMonth() + duration);
+            const formattedDate = nextDate.toISOString().split('T')[0];
+
+            pendingLoanData = {
+                amount: amount,
+                duration: duration,
+                interest: totalInterest,
+                total: totalPayable,
+                nextPaymentDate: formattedDate
+            };
+
+            openSelfieModal();
+        }
+
+        // ================= Selfie Verification (Fixed) =================
+        function openSelfieModal() {
+            cameraReady = false;
+            document.getElementById('selfie-modal').classList.add('active');
+            document.getElementById('btn-capture').disabled = true;
+            document.getElementById('btn-capture').style.display = 'block';
+            document.getElementById('btn-retry').classList.remove('show');
+            startCamera();
+        }
+
+        function startCamera() {
+            const video = document.getElementById('selfie-video');
+            const status = document.getElementById('selfie-status');
+            const captureBtn = document.getElementById('btn-capture');
+            const retryBtn = document.getElementById('btn-retry');
+
+            status.innerHTML = '<span class="spinner"></span> කැමරාව සූදානම් වෙමින්...';
+            captureBtn.disabled = true;
+            captureBtn.style.display = 'block';
+            retryBtn.classList.remove('show');
+            cameraReady = false;
+
+            // Stop any existing stream
+            if (selfieStream) {
+                selfieStream.getTracks().forEach(track => track.stop());
+                selfieStream = null;
+            }
+
+            // Check if camera API is available
+            if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+                status.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> මෙම උපාංගයේ කැමරාව භාවිතා කළ නොහැක. කරුණාකර වෙනත් උපාංගයක් භාවිතා කරන්න.';
+                captureBtn.style.display = 'none';
+                retryBtn.classList.add('show');
+                return;
+            }
+
+            // Request camera access
+            navigator.mediaDevices.getUserMedia({ 
+                video: { 
+                    facingMode: 'user',
+                    width: { ideal: 640 },
+                    height: { ideal: 480 }
+                } 
+            })
+            .then(function(stream) {
+                selfieStream = stream;
+                video.srcObject = stream;
+                video.play()
+                    .then(() => {
+                        status.innerHTML = 'කරුණාකර ඔබේ මුහුණ කැමරාවට එක් කරන්න...';
+                        
+                        // After 2.5 seconds, allow capture
+                        setTimeout(() => {
+                            if (selfieStream && selfieStream.active) {
+                                status.innerHTML = '<i class="fas fa-check-circle" style="color: var(--success);"></i> මුහුණු ස්කෑන් සාර්ථකයි! දැන් ඡායාරූපය ගන්න.';
+                                captureBtn.disabled = false;
+                                cameraReady = true;
+                            }
+                        }, 2500);
+                    })
+                    .catch(err => {
+                        console.error('Video play error:', err);
+                        status.innerHTML = '<i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> වීඩියෝ ප්‍රදර්ශනය කිරීමට නොහැක. නැවත උත්සාහ කරන්න.';
+                        captureBtn.style.display = 'none';
+                        retryBtn.classList.add('show');
+                    });
+            })
+            .catch(function(error) {
+                console.error('Camera error:', error);
+                
+                let errorMsg = 'කැමරාව විවෘත කිරීමට නොහැක. ';
+                if (error.name === 'NotAllowedError' || error.name === 'PermissionDeniedError') {
+                    errorMsg += 'කරුණාකර කැමරා අවසරය ලබා දෙන්න.';
+                } else if (error.name === 'NotFoundError' || error.name === 'DevicesNotFoundError') {
+                    errorMsg += 'මෙම උපාංගයේ කැමරාවක් හමු නොවීය.';
+                } else if (error.name === 'NotReadableError') {
+                    errorMsg += 'කැමරාව වෙනත් යෙදුමක භාවිතයේ ඇත.';
+                } else {
+                    errorMsg += 'නැවත උත්සාහ කරන්න.';
+                }
+                
+                status.innerHTML = `<i class="fas fa-exclamation-triangle" style="color: var(--danger);"></i> ${errorMsg}`;
+                captureBtn.style.display = 'none';
+                retryBtn.classList.add('show');
+            });
+        }
+
+        function retryCamera() {
+            startCamera();
+        }
+
+        function captureSelfie() {
+            if (!cameraReady || !selfieStream) {
+                showModal('warning', 'කැමරාව සූදානම් නැත', 'කරුණාකර කැමරාව සූදානම් වන තෙක් රැඳී සිටින්න.');
+                return;
+            }
+
+            const status = document.getElementById('selfie-status');
+            const captureBtn = document.getElementById('btn-capture');
+            
+            captureBtn.disabled = true;
+            status.innerHTML = '<span class="spinner"></span> ඡායාරූපය සකසමින්...';
+            
+            setTimeout(() => {
+                status.innerHTML = '<i class="fas fa-check-circle" style="color: var(--success);"></i> සත්‍යාපනය සාර්ථකයි!';
+                
+                setTimeout(() => {
+                    closeSelfieModal(false);
+                    finalizeLoanApplication();
+                }, 1000);
+            }, 1500);
+        }
+
+        function closeSelfieModal(cancelled) {
+            document.getElementById('selfie-modal').classList.remove('active');
+            if (selfieStream) {
+                selfieStream.getTracks().forEach(track => track.stop());
+                selfieStream = null;
+            }
+            document.getElementById('selfie-video').srcObject = null;
+            cameraReady = false;
+
+            // If user cancelled, don't finalize
+            if (cancelled) {
+                pendingLoanData = null;
+                showModal('warning', 'සත්‍යාපනය අවලංගු කරන ලදී', 'මුහුණු සත්‍යාපනය අවලංගු කරන ලදී. ණය අයදුම්පත යවා නොමැත.');
+            }
+        }
+
+        function finalizeLoanApplication() {
+            if (!pendingLoanData) return;
+
+            const loans = JSON.parse(localStorage.getItem('userLoans')) || [];
+            
+            const newLoan = {
+                id: Date.now(),
+                amount: pendingLoanData.amount,
+                duration: pendingLoanData.duration,
+                interest: pendingLoanData.interest,
+                total: pendingLoanData.total,
+                nextPaymentDate: pendingLoanData.nextPaymentDate,
+                status: 'Pending Approval',
+                appliedDate: new Date().toISOString().split('T')[0]
+            };
+
+            loans.push(newLoan);
+            localStorage.setItem('userLoans', JSON.stringify(loans));
+
+            pendingLoanData = null;
+
+            showModal(
+                'success', 
+                'සාර්ථකයි!', 
+                `ඔබගේ රු. ${newLoan.amount.toLocaleString('en-LK')} ණය අයදුම්පත සාර්ථකව යවා ඇත.<br><br><strong>තත්ත්වය: අනුමත වෙමින් පවතී (Pending)</strong><br>අපගේ නිලධාරීන් විසින් ඔබගේ තොරතුරු පරීක්ෂා කර අනුමත කරන තෙක් රැඳී සිටින්න.`
+            );
+        }
+
+        // ================= Modals =================
+        function openTermsModal() {
+            document.getElementById('terms-modal').classList.add('active');
+        }
+
+        function closeTermsModal() {
+            document.getElementById('terms-modal').classList.remove('active');
+        }
+
+        function showModal(type, title, message) {
+            const modal = document.getElementById('success-modal');
+            const icon = document.getElementById('modal-icon');
+            const titleEl = document.getElementById('modal-title');
+            const msgEl = document.getElementById('modal-message');
+
+            if (type === 'warning') {
+                icon.className = 'fas fa-exclamation-triangle modal-icon warning';
+            } else {
+                icon.className = 'fas fa-check-circle modal-icon';
+            }
+
+            titleEl.textContent = title;
+            msgEl.innerHTML = message;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('success-modal').classList.remove('active');
+            document.getElementById('loan-form').reset();
+            document.getElementById('loan-summary').style.display = 'none';
+            document.getElementById('submit-btn').style.display = 'none';
+            
+            renderAllLoans();
+            checkApplyWarning();
+            
+            const homeNav = document.querySelector('.nav-item');
+            switchTab('home', homeNav);
+        }
+
+        // ================= Cancel Loan =================
+        function cancelLoan(loanId) {
+            currentCancelId = loanId;
+            document.getElementById('confirm-modal').classList.add('active');
+        }
+
+        function closeConfirmModal() {
+            document.getElementById('confirm-modal').classList.remove('active');
+            currentCancelId = null;
+        }
+
+        function confirmCancel() {
+            if (currentCancelId) {
+                let loans = JSON.parse(localStorage.getItem('userLoans')) || [];
+                loans = loans.filter(loan => loan.id !== currentCancelId);
+                localStorage.setItem('userLoans', JSON.stringify(loans));
+
+                renderAllLoans();
+                checkApplyWarning();
+
+                showModal('success', 'ඉවත් කරන ලදී!', 'ඔබගේ ණය අයදුම්පත සාර්ථකව ඉවත් කරන ලදී.');
+            }
+            closeConfirmModal();
+        }
+
+        // ================= Logout =================
+        function resetApp() {
+            document.getElementById('logout-modal').classList.add('active');
+        }
+
+        function closeLogoutModal() {
+            document.getElementById('logout-modal').classList.remove('active');
+        }
+
+        function confirmLogout() {
+            localStorage.removeItem('loanAppUser');
+            localStorage.removeItem('userLoans');
+            location.reload();
+        }
+
+        // ================= Render Loans =================
+        function renderAllLoans() {
+            const loans = JSON.parse(localStorage.getItem('userLoans')) || [];
+            
+            const homeContainer = document.getElementById('loan-status-container');
+            const loansContainer = document.getElementById('all-loans-container');
+
+            if (loans.length === 0) {
+                homeContainer.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-file-invoice"></i>
+                        <h3>ඔබට දැනට ක්‍රියාකාරී ණයක් නොමැත</h3>
+                        <p>ණයක් ලබා ගැනීමට පහළ ඇති <strong>+</strong> අයිකනය ක්ලික් කර අයදුම්පත පුරවන්න.</p>
+                    </div>
+                `;
+                loansContainer.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-file-invoice"></i>
+                        <h3>ණයක් නොමැත</h3>
+                        <p>ඔබ තවමත් කිසිදු ණයක් ලබාගෙන නොමැත.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const sortedLoans = [...loans].reverse();
+            
+            let homeHTML = '';
+            let loansHTML = '';
+
+            sortedLoans.forEach((loan, index) => {
+                let statusBadge = '';
+                let cardClass = '';
+
+                if (loan.status === 'Pending Approval') {
+                    statusBadge = '<span class="badge badge-yellow">අනුමත වෙමින් පවතී</span>';
+                    cardClass = 'pending';
+                } else if (loan.status === 'Approved' || loan.status === 'Active') {
+                    statusBadge = '<span class="badge badge-green">ක්‍රියාකාරී</span>';
+                    cardClass = 'active';
+                }
+
+                const loanCardHTML = `
+                    <div class="loan-card ${cardClass}">
+                        <div class="loan-card-header">
+                            <h3><i class="fas fa-file-invoice-dollar"></i> ණය #${loans.length - index}</h3>
+                            ${statusBadge}
+                        </div>
+                        <div class="loan-details-grid">
+                            <div class="detail-item">
+                                <i class="fas fa-coins detail-icon"></i>
+                                <div class="detail-text">
+                                    <p>ණය මුදල</p>
+                                    <h4>රු. ${loan.amount.toLocaleString('en-LK')}</h4>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-percent detail-icon"></i>
+                                <div class="detail-text">
+                                    <p>පොලී අනුපාතය</p>
+                                    <h4>10% <span>(මසකට)</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="status-grid">
+                            <div class="status-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <p>අයදුම් කළ දිනය</p>
+                                <h4>${loan.appliedDate}</h4>
+                            </div>
+                            <div class="status-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <p>ඊළඟ ගෙවීම</p>
+                                <h4>${loan.nextPaymentDate}</h4>
+                                <span class="badge badge-blue">ගෙවිය යුතුයි</span>
+                            </div>
+                            <div class="status-item">
+                                <i class="fas fa-shield-check"></i>
+                                <p>මුළු ගෙවිය යුතු</p>
+                                <h4>රු. ${loan.total.toLocaleString('en-LK')}</h4>
+                            </div>
+                        </div>
+                        ${loan.status === 'Pending Approval' ? `
+                            <button class="cancel-btn" onclick="cancelLoan(${loan.id})">
+                                <i class="fas fa-trash-alt"></i> අයදුම්පත ඉවත් කරන්න
+                            </button>
+                        ` : ''}
+                    </div>
+                `;
+
+                if (index === 0) {
+                    homeHTML = loanCardHTML;
+                }
+                
+                loansHTML += loanCardHTML;
+            });
+
+            homeContainer.innerHTML = homeHTML;
+            loansContainer.innerHTML = loansHTML;
+        }
+
+        // ================= Window Load =================
+        window.onload = function() {
+            let lastTouchEnd = 0;
+            document.addEventListener('touchend', function (event) {
+                const now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+
+            document.addEventListener('wheel', function(e) {
+                if (e.ctrlKey) e.preventDefault();
+            }, { passive: false });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+                    e.preventDefault();
+                }
+            });
+
+            const savedUser = localStorage.getItem('loanAppUser');
+            if (savedUser) {
+                initApp(JSON.parse(savedUser));
+            } else {
+                document.getElementById('auth-screen').classList.remove('hidden');
+                const lastEmail = localStorage.getItem('lastLoginEmail');
+                if (lastEmail) {
+                    document.getElementById('login-email').value = lastEmail;
+                }
+            }
+        };
+    </script>
+
 </body>
 </html>
